@@ -10,6 +10,6 @@ Name: John King'athia Karuitha \hfill\ Signature: \ldots \ldots \ldots \ldots \l
 
 Student Number: 855810 \hfill\ Date: \today
 
-\vspace{3mm}
+\vspace{10mm}
 
 ORCID: 0000-0002-8204-7034

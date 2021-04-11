@@ -9987,6 +9987,36 @@
         {
             "author": [
                 {
+                    "family": "Schnyder",
+                    "given": "Gerhard"
+                },
+                {
+                    "family": "Siems",
+                    "given": "Mathias"
+                },
+                {
+                    "family": "Aguilera",
+                    "given": "Ruth V"
+                }
+            ],
+            "container-title": "Socio-Economic Review",
+            "id": "schnyder2018twenty",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Twenty years of “law and finance”: Time to take law seriously",
+            "title-short": "Twenty years of “law and finance”",
+            "type": "article-journal",
+            "volume": "12"
+        },
+        {
+            "author": [
+                {
                     "family": "Scott",
                     "given": "W Richard"
                 },
