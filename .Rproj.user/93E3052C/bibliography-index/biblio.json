@@ -5590,6 +5590,60 @@
         {
             "author": [
                 {
+                    "family": "Hartarska",
+                    "given": "Valentina"
+                },
+                {
+                    "family": "Mersland",
+                    "given": "Roy"
+                }
+            ],
+            "container-title": "European financial management",
+            "id": "hartarska2012governance",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "page": "218-239",
+            "publisher": "Wiley Online Library",
+            "title": "Which governance mechanisms promote efficiency in reaching poor clients? Evidence from rated microfinance institutions",
+            "type": "article-journal",
+            "volume": "18"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hartarska",
+                    "given": "Valentina"
+                },
+                {
+                    "family": "Nadolnyak",
+                    "given": "Denis"
+                }
+            ],
+            "container-title": "Applied economics",
+            "id": "hartarska2007regulated",
+            "issue": "10",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "1207-1222",
+            "publisher": "Taylor & Francis",
+            "title": "Do regulated microfinance institutions achieve better sustainability and outreach? Cross-country evidence",
+            "type": "article-journal",
+            "volume": "39"
+        },
+        {
+            "author": [
+                {
                     "family": "Hassan",
                     "given": "M Kabir"
                 },
@@ -6203,6 +6257,28 @@
             "title": "Measuring financial access: 10 years of the IMF financial access survey",
             "title-short": "Measuring financial access",
             "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Griffoli",
+                    "given": "T. M."
+                }
+            ],
+            "container-title": "Finance and Development",
+            "id": "fd2017",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "26-29",
+            "title": "Banking on change",
+            "type": "article-journal",
+            "volume": "54"
         },
         {
             "author": [
@@ -8430,6 +8506,7 @@
             "volume": "60"
         },
         {
+            "URL": "Recuperado de http://www. themix. org/mixmarket/publications/2014-global~…",
             "author": [
                 {
                     "family": "Market",
@@ -8444,8 +8521,28 @@
                     ]
                 ]
             },
-            "publisher": "Recuperado de http://www. themix. org/mixmarket/publications/2014-global …",
+            "publisher": "The Microfinance Information Exchange",
             "title": "Global outreach & financial. Performance benchmark report-2014",
+            "type": ""
+        },
+        {
+            "URL": "https://www.themix.org/publications/2015-global-outreach-and-financial-performance-benchmark-report",
+            "author": [
+                {
+                    "family": "Market",
+                    "given": "MIX"
+                }
+            ],
+            "id": "market2017global",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "publisher": "The Microfinance Information Exchange",
+            "title": "Global outreach & financial. Performance benchmark report-2015",
             "type": ""
         },
         {
@@ -8475,28 +8572,6 @@
             "title-short": "Angel agents",
             "type": "article-journal",
             "volume": "25"
-        },
-        {
-            "author": [
-                {
-                    "family": "Morduch",
-                    "given": "Jonathan"
-                },
-                {
-                    "family": "Ogden",
-                    "given": "Timothy"
-                }
-            ],
-            "id": "morduch2018social",
-            "issued": {
-                "date-parts": [
-                    [
-                        2018
-                    ]
-                ]
-            },
-            "title": "SOCIAL INVESTMENT THROUGH THE LENS OF MICROFINANCE",
-            "type": "article-journal"
         },
         {
             "author": [
