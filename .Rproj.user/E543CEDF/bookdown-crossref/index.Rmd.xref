@@ -1,0 +1,36 @@
+h21:section 
+h2:thesis-metadata thesis metadata
+h21:section-1 
+h23:section-2 
+h2:bibliography-path bibliography path
+h23:section-3 
+h24:section-4 
+h2:pdf-layout-options PDF layout options
+h25:section-5 
+h2:submitting-a-masters-thesis submitting a master’s thesis
+h1:set-masters-submission-true-for-an-alternative-anonymous-title-page-with set masters-submission: true for an alternative, anonymous title page with
+h1:candidate-number-and-word-count candidate number and word count
+h1:if-you-want-to-use-a-different-title-page-altogether-provide-a-path-to-a if you want to use a different title page altogether, provide a path to a
+h1:tex-file-here-and-it-will-override-the-default-oxford-one .tex file here and it will override the default Oxford one
+h1:alternative-title-page-front-and-back-matteralt-title-page-example.tex alternative-title-page: front-and-back-matter/alt-title-page-example.tex
+h2:correction-highlighting correction highlighting
+h2:binding-margins binding / margins
+h2:position-of-page-numbers position of page numbers
+h2:position-of-running-header position of running header
+h2:section-numbering section numbering
+h2:tables-of-content tables of content
+h2:code-block-spacing code block spacing
+h2:linespacing linespacing
+h3:other-stuff other stuff
+h3:citation-and-bibliography-style citation and bibliography style
+h1:biblatex-options biblatex options
+h1:unless-you-run-into-biber-error-messages-use-natbib-as-it-lets-you-customise-your-bibliography-directly unless you run into  error messages, use natbib as it lets you customise your bibliography directly
+h1:natbib-options natbib options
+h1:natbib-runs-into-fewer-errors-than-biblatex-but-to-customise-your-bibliography-you-need-to-fiddle-with-.bst-files natbib runs into fewer errors than biblatex, but to customise your bibliography you need to fiddle with .bst files
+h21:section-6 
+h2:output-options output options
+h21:section-7 
+h1:the-lines-below-make-the-knit-button-render-the-whole-thesis-to-pdf-html-or-word The lines below make the  button render the whole thesis to PDF, HTML, or Word
+h1:when-outputting-to-pdf-you-can-clean-up-the-files-latex-generates-by-running When outputting to PDF, you can clean up the files LaTeX generates by running
+h1:file.removelist.filespattern-.logmtcmafauxbblblgxml-in-the-r-console ’file.remove(list.files(pattern = "*.(log|mtc|maf|aux|bbl|blg|xml)"))’ in the R console
+

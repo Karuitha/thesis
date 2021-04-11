@@ -1,0 +1,179 @@
+{
+    "sources": [
+        {
+            "author": [
+                {
+                    "family": "Darwin",
+                    "given": "Charles"
+                }
+            ],
+            "id": "Darwin1859",
+            "issued": {
+                "date-parts": [
+                    [
+                        1859
+                    ]
+                ]
+            },
+            "publisher": "John Murray",
+            "publisher-place": "London",
+            "title": "On the Origin of Species by Means of Natural Selection or the Preservation of Favoured Races in the Struggle for Life",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "dropping-particle": "von",
+                    "family": "Goethe",
+                    "given": "Johann Wolfgang"
+                }
+            ],
+            "id": "von_goethe_wilhelm_1829",
+            "issued": {
+                "date-parts": [
+                    [
+                        1829
+                    ]
+                ]
+            },
+            "publisher": "Cotta",
+            "title": "Wilhelm Meisters Wanderjahre oder die Entsagenden",
+            "title-short": "Werke",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1145/1738826.1738829",
+            "ISBN": "9781605588544",
+            "ISSN": "14712970",
+            "URL": "http://douri.sh/publications/2009/nonuse-ozchi.pdf",
+            "author": [
+                {
+                    "family": "Satchell",
+                    "given": "Christine"
+                },
+                {
+                    "family": "Dourish",
+                    "given": "Paul"
+                }
+            ],
+            "container-title": "Proceedings of the Annual Conference of the Australian Computer-Human Interaction Special Interest Group (OZCHI ’09)",
+            "id": "Satchell2009",
+            "issue": "November",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "9-16",
+            "title": "Beyond The User: Use And Non-Use in HCI",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Wu",
+                    "given": "Tim"
+                }
+            ],
+            "id": "Wu2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "publisher": "Knopf Publishing Group",
+            "title": "The Attention Merchants: The Epic Scramble to Get Inside Our Heads",
+            "type": "book"
+        },
+        {
+            "DOI": "10.1016/j.tics.2014.01.006",
+            "ISSN": "1364-6613",
+            "URL": "http://dx.doi.org/10.1016/j.tics.2014.01.006",
+            "author": [
+                {
+                    "family": "Shea",
+                    "given": "Nicholas"
+                },
+                {
+                    "family": "Boldt",
+                    "given": "Annika"
+                },
+                {
+                    "family": "Bang",
+                    "given": "Dan"
+                },
+                {
+                    "family": "Yeung",
+                    "given": "Nick"
+                },
+                {
+                    "family": "Heyes",
+                    "given": "Cecilia"
+                },
+                {
+                    "family": "Frith",
+                    "given": "Chris D"
+                }
+            ],
+            "container-title": "Trends in Cognitive Sciences",
+            "id": "Shea2014",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "page": "186-193",
+            "title": "Supra-personal cognitive control and metacognition",
+            "type": "article-journal",
+            "volume": "18"
+        },
+        {
+            "DOI": "10.1177/1071181312561289",
+            "ISBN": "9780945289418",
+            "ISSN": "10711813",
+            "author": [
+                {
+                    "family": "Lottridge",
+                    "given": "Danielle"
+                },
+                {
+                    "family": "Marschner",
+                    "given": "Eli"
+                },
+                {
+                    "family": "Wang",
+                    "given": "Ellen"
+                },
+                {
+                    "family": "Romanovsky",
+                    "given": "Maria"
+                },
+                {
+                    "family": "Nass",
+                    "given": "Clifford"
+                }
+            ],
+            "container-title": "Proceedings of the human factors and ergonomics society 56th annual meeting",
+            "id": "Lottridge2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "Browser design impacts multitasking",
+            "type": "paper-conference"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}

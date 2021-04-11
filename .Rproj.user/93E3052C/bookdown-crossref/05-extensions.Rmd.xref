@@ -1,0 +1,29 @@
+h1:customisations-and-extensions Customisations and extensions
+h2:front-matter Front matter
+h3:shorten-captions-shown-in-the-list-of-figures-pdf Shorten captions shown in the list of figures (PDF)
+h3:shorten-captions-shown-in-the-list-of-tables-pdf Shorten captions shown in the list of tables (PDF)
+h2:shorten-running-header-pdf Shorten running header (PDF)
+h2:unnumbered-chapters Unnumbered chapters
+h2:beginning-chapters-with-quotes-pdf Beginning chapters with quotes (PDF)
+h2:highlighting-corrections-html-pdf Highlighting corrections (HTML & PDF)
+h3:short-inline-corrections Short, inline corrections
+h3:blocks-of-added-or-changed-material Blocks of added or changed material
+h3:stopping-corrections-from-being-highlighted Stopping corrections from being highlighted
+h2:apply-custom-font-color-and-highlighting-to-text-html-pdf Apply custom font color and highlighting to text (HTML & PDF)
+h2:embed-pdf Including another paper in your thesis - embed a PDF document
+h2:embed-rmd Including another paper in your thesis - R Markdown child document
+h3:an-example-paper-in-another-folder An example paper in another folder
+h3:step-1-include-paper-as-a-child-document Step 1: Include paper as a child document
+h3:step-2-make-file-paths-compatible Step 2: Make file paths compatible
+h4:note-on-html-output Note on HTML output
+h3:step-3-make-sure-header-levels-are-correct Step 3: Make sure header levels are correct
+h3:step-4.-make-sure-figure-widths-are-correct Step 4. Make sure figure widths are correct
+h2:customizing-referencing Customizing referencing
+h3:using-a-.csl-file-with-pandoc-instead-of-biblatex Using a .csl file with pandoc instead of biblatex
+h3:biblatex-custom Customizing biblatex and adding chapter bibliographies
+h2:customizing-the-page-headers-and-footers-pdf Customizing the page headers and footers (PDF)
+h2:diving-in-to-the-oxthesis-latex-template-pdf Diving in to the OxThesis LaTeX template (PDF)
+h2:customising-to-a-different-university Customising to a different university
+h3:the-minimal-route The minimal route
+h3:replacing-the-entire-title-page-with-your-required-content Replacing the entire title page with your required content
+

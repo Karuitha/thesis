@@ -1,0 +1,12 @@
+Country,Region,FSP Count,Loan Officers,"No of Borrowers
+‘000",Gross Loan Portfolio US$ Millions (2015),Average Loan per Borrower US$,Deposits US$ Millions (2015)
+DRC,Central Africa,8,658,174.8,130.4,547,66.1
+Cameroon,Central Africa,10,1068,188.6,344.1,1824,408.3
+Ethiopia,Eastern Africa,3,371,174.1,34.8,200,12.6
+Kenya,Eastern Africa,11,2402,374,3290.4,1232,3632
+Uganda,Eastern Africa,18,999,223.3,363.3,230,472.1
+Morocco,North Africa,6,3398,763.6,566.4,742,0
+Egypt,North Africa,4,1687,639.5,157.6,246,0
+South Africa,Southern Africa,1,486,138.8,20.8,150,0
+Nigeria,West Africa,11,5580,1698.8,542.5,319,260.3
+Ghana,West Africa,10,645,281.4,507.8,1787,727.4
