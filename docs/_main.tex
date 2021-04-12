@@ -1476,557 +1476,1131 @@ Rsearchers like Bayai and Ikhide (2016) attribute part of the disparities to reg
 Also, donors funding is positively correlated with the tangible assets, past due loans and the size of an MFI, indicating that even donors evaluate the riskiness of the MFIs they fund, using this information as a screening mechanism. However, donor funding is not influenced by the profitability of the MFI, meaning that indeed donors mostly have a social orientation. On the other hand, more profitable firms (with more even profit distribution) with more tangible assets (and bigger) and with a corporate organizational structure have easier access to debt capital. Moreover, the credit ratings of the MFIs do not influence their capital structure (Tchakoute-Tchuigoua, 2015).
 
 \begin{savequote}
-There is grandeur in this view of life, with its several powers, having
-been originally breathed into a few forms or into one; and that, whilst
-this planet has gone cycling on according to the fixed law of gravity,
-from so simple a beginning endless forms most beautiful and most
-wonderful have been, and are being, evolved.
-\qauthor{--- Charles Darwin \autocite{Darwin1859}}\end{savequote}
+Change has a considerable psychological impact on the human mind. To the
+fearful it is threatening because it means that things may get worse. To
+the hopeful it is encouraging because things may get better. To the
+confident it is inspiring because the challenge exists to make things
+better.
+\qauthor{--- King Whitney Jr. \autocite{Darwin1859}}\end{savequote}
 
 
 
-\hypertarget{customisations-and-extensions}{%
-\chapter{Customisations and extensions}\label{customisations-and-extensions}}
+\hypertarget{transformation-of-microfinance-institutions-in-africa}{%
+\chapter{Transformation of Microfinance Institutions in Africa}\label{transformation-of-microfinance-institutions-in-africa}}
 
 \minitoc 
 
-\noindent This chapter describes a number of additional tips and tricks as well as possible customizations to the \texttt{oxforddown} thesis.
-
-\hypertarget{front-matter}{%
-\section{Front matter}\label{front-matter}}
-
-\hypertarget{shorten-captions-shown-in-the-list-of-figures-pdf}{%
-\subsection{Shorten captions shown in the list of figures (PDF)}\label{shorten-captions-shown-in-the-list-of-figures-pdf}}
-
-You might want your list of figures (which follows the table of contents) to have shorter (or just different) figure descriptions than the actual figure captions.
-
-Do this using the chunk option \texttt{fig.scap} (`short caption'), for example \texttt{\{r\ captain-image,\ fig.cap="A\ very\ long\ and\ descriptive\ (and\ potentially\ boring)\ caption\ that\ doesn\textquotesingle{}t\ fit\ in\ the\ list\ of\ figures,\ but\ helps\ the\ reader\ understand\ what\ the\ figure\ communicates.",\ fig.scap="A\ concise\ description\ for\ the\ list\ of\ figures"}
-
-\hypertarget{shorten-captions-shown-in-the-list-of-tables-pdf}{%
-\subsection{Shorten captions shown in the list of tables (PDF)}\label{shorten-captions-shown-in-the-list-of-tables-pdf}}
-
-You might want your list of tables (which follows the list of figures in your thesis front matter) to have shorter (or just different) table descriptions than the actual table captions.
-
-If you are using \texttt{knitr::kable} to generate a table, you can do this with the argument \texttt{caption.short}, e.g.:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(mtcars,}
-              \AttributeTok{caption =} \StringTok{"A very long and descriptive (and potentially}
-\StringTok{              boring) caption that doesn\textquotesingle{}t fit in the list of figures,}
-\StringTok{              but helps the reader understand what the figure }
-\StringTok{              communicates."}\NormalTok{,}
-              \AttributeTok{caption.short =} \StringTok{"A concise description for the list of tables"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{shorten-running-header-pdf}{%
-\section{Shorten running header (PDF)}\label{shorten-running-header-pdf}}
-
-You might want a chapter's running header (i.e.~the header showing the title of the current chapter at the top of page) to be shorter (or just different) to the actual chapter title.
-
-Do this by adding the latex command \texttt{\textbackslash{}chaptermark\{My\ shorter\ version\}} after your chapter title.
-
-For example, chapter \ref{cites-and-refs}`s running header is simply 'Cites and cross-refs', because it begins like this:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\# Citations, cross{-}references, and collaboration \{\#cites{-}and{-}refs\} }
-\NormalTok{\textbackslash{}chaptermark\{Cites and cross{-}refs\}}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{unnumbered-chapters}{%
-\section{Unnumbered chapters}\label{unnumbered-chapters}}
-
-To make chapters unnumbered (normally only relevant to the Introduction and/or the Conclusion), follow the chapter header with \texttt{\{-\}}, e.g.~\texttt{\#\ Introduction\ \{-\}}.
-
-When you do this, you must also follow the heading with these two latex commands:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\textbackslash{}adjustmtc}
-\FunctionTok{\textbackslash{}markboth}\NormalTok{\{The Name of Your Unnumbered Chapter\}\{\}}
-\end{Highlighting}
-\end{Shaded}
-
-Otherwise the chapter's mini table of contents and the running header will show the previous chapter.
-
-\hypertarget{beginning-chapters-with-quotes-pdf}{%
-\section{Beginning chapters with quotes (PDF)}\label{beginning-chapters-with-quotes-pdf}}
-
-The OxThesis LaTeX template lets you inject some wittiness into your thesis by including a block of type \texttt{savequote} at the beginning of chapters.
-To do this, use the syntax \texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{block\ type=\textquotesingle{}savequote\textquotesingle{}\}}.\footnote{For more on custom block types, see the relevant section in \href{https://bookdown.org/yihui/bookdown/custom-blocks.html}{\emph{Authoring Books with R Markdown}}.}
-
-Add the reference for the quote with the chunk option \texttt{quote\_author="my\ author\ name"}.
-You will also want to add the chunk option \texttt{include=knitr::is\_latex\_output()} so that quotes are only included in PDF output.
-
-It's not possible to use markdown syntax inside chunk options, so if you want to e.g.~italicise a book name in the reference use a \href{https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html\#text-references}{`text reference'}: Create a named piece of text with `(ref:label-name) My text', then point to this in the chunk option with \texttt{quote\_author=\textquotesingle{}(ref:label-name)\textquotesingle{}}.
-
-\hypertarget{highlighting-corrections-html-pdf}{%
-\section{Highlighting corrections (HTML \& PDF)}\label{highlighting-corrections-html-pdf}}
-
-For when it comes time to do corrections, you may want to highlight changes made when you submit a post-viva, corrected copy to your examiners so they can quickly verify you've completed the task.
-You can do so like this:
-
-\hypertarget{short-inline-corrections}{%
-\subsection{Short, inline corrections}\label{short-inline-corrections}}
-
-Highlight \textbf{short, inline corrections} by doing \texttt{{[}like\ this{]}\{.correction\}} --- the text between the square brackets will then \hl{be highlighted in blue} in the output.
-
-Note that pandoc might get confused by citations and cross-references inside inline corrections.
-In particular, it might get confused by \texttt{"{[}what\ @Shea2014\ said{]}\{.correction\}"} which becomes \autocite[what][ said]{Shea2014}\{.correction\}
-In such cases, you can use LaTeX syntax directly.
-The correction highlighting uses the \href{https://ctan.org/pkg/soul}{soul} package, so you can do like this:
-
-\begin{itemize}
-\tightlist
-\item
-  If using biblatex for references, use \texttt{"\textbackslash{}hl\{what\ \textbackslash{}textcite\{Shea2014\}\ said\}}
-\item
-  If using natbib for references, use \texttt{"\textbackslash{}hl\{what\ \textbackslash{}cite\{Shea2014\}\ said\}}
-\end{itemize}
-
-Using raw LaTeX has the drawback of corrections then not showing up in HTML output at all, but you might only care about correction highlighting in the PDF for your examiners anyway!
-
-\hypertarget{blocks-of-added-or-changed-material}{%
-\subsection{Blocks of added or changed material}\label{blocks-of-added-or-changed-material}}
-
-Highlight entire \textbf{blocks of added or changed material} by putting them in a block of type \texttt{correction}, using the syntax \texttt{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{block\ type=\textquotesingle{}correction\textquotesingle{}\}}.\footnote{In the \textbf{.tex} file for PDF output, this will put the content between \texttt{\textbackslash{}begin\{correction\}} and \texttt{\textbackslash{}end\{correction\}}; in gitbook output it will be put between \texttt{\textless{}div\ class="correction"\textgreater{}} and \texttt{\textless{}/div\textgreater{}}.}
-Like so:
-
-\begin{correction}
-For larger chunks, like this paragraph or indeed entire figures, you can
-use the \texttt{correction} block type. This environment
-\textbf{highlights paragraph-sized and larger blocks} with the same blue
-colour.
-\end{correction}
-
-\emph{Note that correction blocks cannot be included in word output.}
-
-\hypertarget{stopping-corrections-from-being-highlighted}{%
-\subsection{Stopping corrections from being highlighted}\label{stopping-corrections-from-being-highlighted}}
-
-To turn off correction highlighting, go to the YAML header of \textbf{index.Rmd}, then:
-
-\begin{itemize}
-\tightlist
-\item
-  PDF output: set \texttt{corrections:\ false}\\
-\item
-  HTML output: remove or comment out \texttt{-\ templates/corrections.css}
-\end{itemize}
-
-\hypertarget{apply-custom-font-color-and-highlighting-to-text-html-pdf}{%
-\section{Apply custom font color and highlighting to text (HTML \& PDF)}\label{apply-custom-font-color-and-highlighting-to-text-html-pdf}}
-
-The lua filter that adds the functionality to highlight corrections adds two more tricks:
-you can apply your own choice of colour to highlight text, or change the font color.
-The syntax is as follows:
-
 \begin{quote}
-Here's \texttt{{[}some\ text\ in\ pink\ highlighting{]}\{highlight="pink"\}}\\
-Becomes: Here's \sethlcolor{pink}\hl{some text in pink highlighting}\sethlcolor{correctioncolor}.
+\hypertarget{abstract}{%
+\section{\texorpdfstring{\textbf{Abstract}}{Abstract}}\label{abstract}}
+
+We examine the factors driving non-governmental organisation microfinance institutions to convert to the commercial, profit-oriented model. Using data from the World Bank and the International Monetary Fund (IMF), we ran logit, probit, and multinomial logit models with NGOs as the base outcome. At the firm level, age, size influence transformation. Legal tradition, institutional quality, and stock market development are significant factors at the country level. However, private credit to GDP and GDP growth rates are not significant drivers of conversion. Older firms are less likely to be NGOs, as are MFIs in civil law countries. Larger MFIs and MFIs located in countries with ``other'' legal traditions are more likely to be commercial. Institutional quality raises the chances of conversion, while stock market capitalisation relates negatively with transformation. Overall, the model does better than a null model, and the results remain robust to removing outliers.
 \end{quote}
 
-\begin{quote}
-\texttt{{[}Here\textquotesingle{}s\ some\ text\ with\ blue\ font{]}\{color="blue"\}}~\\
-Becomes: \textcolor{blue}{Here's some text with blue font}
-\end{quote}
-
-\begin{quote}
-Finally --- never, ever actually do this -- \texttt{{[}here\textquotesingle{}s\ some\ text\ with\ black\ highlighting\ and\ yellow\ font{]}\{highlight="black"\ color="yellow"\}}\\
-Becomes: \textcolor{yellow}{\sethlcolor{black}\hl{here's some text with black highlighting and yellow font}\sethlcolor{correctioncolor}}
-\end{quote}
-
-The file \textbf{scripts\_and\_filters/colour\_and\_highlight.lua} implements this, if you want to fiddle around with it.
-It works with both PDF and HTML output.
-
-\hypertarget{embed-pdf}{%
-\section{Including another paper in your thesis - embed a PDF document}\label{embed-pdf}}
-
-You may want to embed existing PDF documents into the thesis, for example if your department allows a `portfolio' style thesis and you need to include an existing typeset publication as a chapter.
-
-In gitbook output, you can simply use \texttt{knitr::include\_graphics} and it should include a scrollable (and downloadable) PDF.
-You will probably want to set the chunk options \texttt{out.width=\textquotesingle{}100\%\textquotesingle{}} and \texttt{out.height=\textquotesingle{}1000px\textquotesingle{}}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{include\_graphics}\NormalTok{(}\StringTok{"figures/sample{-}content/pdf\_embed\_example/Lyngs2020\_FB.pdf"}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
-
-In LaTeX output, however, this approach can cause odd behaviour.
-Therefore, when you build your thesis to PDF, split the PDF into an alphanumerically sorted sequence of \textbf{single-page} PDF files (you can do this automatically with the package \texttt{pdftools}). You can then use the appropriate LaTeX command to insert them, as shown below (for brevity, in the \texttt{oxforddown} PDF sample content we're only including two pages).
-\emph{Note that the chunk option \texttt{results=\textquotesingle{}asis\textquotesingle{}} must be set.}
-You may also want to remove margins from the PDF files, which you can do with Adobe Acrobat (paid version) and likely other software.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# install.packages(pdftools)}
-\CommentTok{\# split PDF into pages stored in}
-\NormalTok{    figures}\SpecialCharTok{/}\NormalTok{sample}\SpecialCharTok{{-}}\NormalTok{content}\SpecialCharTok{/}\NormalTok{pdf\_embed\_example}\SpecialCharTok{/}\NormalTok{split}\SpecialCharTok{/}
-\CommentTok{\#}
-\NormalTok{    pdftools}\SpecialCharTok{::}\FunctionTok{pdf\_split}\NormalTok{(}\StringTok{"figures/sample{-}content/pdf\_embed\_example/Lyngs2020\_FB.pdf"}\NormalTok{,}
-\CommentTok{\# output = "figures/sample{-}content/pdf\_embed\_example/split/")}
-
-\CommentTok{\# grab the pages}
-\NormalTok{pages }\OtherTok{\textless{}{-}} \FunctionTok{list.files}\NormalTok{(}\StringTok{"figures/sample{-}content/pdf\_embed\_example/split"}\NormalTok{,}
-    \AttributeTok{full.names =} \ConstantTok{TRUE}\NormalTok{)}
-
-\CommentTok{\# set how wide you want the inserted PDFs to be:}
-\CommentTok{\# 1.0 is 100 per cent of the oxforddown PDF page width;}
-\CommentTok{\# you may want to make it a bit bigger}
-\NormalTok{pdf\_width }\OtherTok{\textless{}{-}} \FloatTok{1.2}
-
-\CommentTok{\# for each PDF page, insert it nicely and}
-\CommentTok{\# end with a page break}
-\FunctionTok{cat}\NormalTok{(stringr}\SpecialCharTok{::}\FunctionTok{str\_c}\NormalTok{(}\StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{newpage }\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{begin\{center\}}
-\StringTok{    }\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{makebox[}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{linewidth][c]\{}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{includegraphics[width="}\NormalTok{, pdf\_width,}
-    \StringTok{"}\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{linewidth]\{"}\NormalTok{, pages, }\StringTok{"\}\} }\SpecialCharTok{\textbackslash{}\textbackslash{}}\StringTok{end\{center\}"}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-\newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/sample-content/pdf_embed_example/split/_000000000000001.pdf}} \end{center} \newpage \begin{center} \makebox[\linewidth][c]{\includegraphics[width=1.2\linewidth]{figures/sample-content/pdf_embed_example/split/_000000000000011.pdf}} \end{center}
-
-\hypertarget{embed-rmd}{%
-\section{Including another paper in your thesis - R Markdown child document}\label{embed-rmd}}
-
-Sometimes you want to include another paper you are currently writing as a chapter in your thesis.
-Above \ref{embed-pdf}, we described the simplest way to do this: include the other paper as a pdf.
-However, in some cases you instead want to include the R Markdown source from this paper, and have it compiled within your thesis.
-This is a little bit more tricky, because you need to keep careful track of your file paths, but it is possible by \href{https://bookdown.org/yihui/rmarkdown-cookbook/child-document.html}{including the paper as a child document}.
-There are four main steps:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  Include the paper as a child document
-\item
-  Make file paths compatible with knitting the article on its own, as well as when it's include in your thesis
-\item
-  Make header levels correct
-\item
-  Make figure widths correct
-\end{enumerate}
-
-\hypertarget{an-example-paper-in-another-folder}{%
-\subsection{An example paper in another folder}\label{an-example-paper-in-another-folder}}
-
-Take this simple example (files for this are in \href{https://github.com/ulyngs/oxforddown-external-article}{this GitHub repository}):
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{|{-}{-}paper\_to\_include}
-\NormalTok{|  |{-}{-}my\_paper.Rmd}
-\NormalTok{|  |{-}{-}data}
-\NormalTok{|  |  |{-}{-}cat\_salt.csv}
-\NormalTok{|  |{-}{-}figures}
-\NormalTok{|  |  |{-}{-}cat.jpg}
-\NormalTok{|}
-\NormalTok{|{-}{-}thesis}
-\end{Highlighting}
-\end{Shaded}
-
-As the chart suggests, you have another folder, \textbf{paper\_to\_include/} living in the same containing folder as your thesis folder.
-In the \textbf{paper\_to\_include} folder, the file \textbf{my\_paper.Rmd} is where you write the paper.
-In \textbf{my\_paper.Rmd}, you read in a CSV file found in the subfolder \textbf{data/cats.csv}, and also an image from the subfolder \textbf{figures/cat.jpg}.
-
-\hypertarget{step-1-include-paper-as-a-child-document}{%
-\subsection{Step 1: Include paper as a child document}\label{step-1-include-paper-as-a-child-document}}
-
-In your thesis folder, create an Rmd file for the chapter where you want to include another paper.
-Add one or more code chunks that include R Markdown files from that paper as child documents:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\# Including an external chapter }
-
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r child = "../paper\_to\_include/my\_paper.Rmd"\}}
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{step-2-make-file-paths-compatible}{%
-\subsection{Step 2: Make file paths compatible}\label{step-2-make-file-paths-compatible}}
-
-Use \href{https://rmarkdown.rstudio.com/lesson-6.html}{parameters} to adjust the file path of images based on values you set in the YAML header of an R Markdown file.
-In \textbf{my\_paper.Rmd}, create a parameter called \texttt{other\_path} and set it to an empty string:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\PreprocessorTok{{-}{-}{-}}
-\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"A fabulous article in a different folder"}
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
-\PreprocessorTok{{-}{-}{-}}
-\end{Highlighting}
-\end{Shaded}
-
-In \textbf{my\_paper.Rmd}, put this at the start of the filepath when you read in data or include images:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{library}\NormalTok{(tidyverse)}
-\FunctionTok{library}\NormalTok{(knitr)}
-
-\NormalTok{cat\_data }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}\FunctionTok{str\_c}\NormalTok{(params}\SpecialCharTok{$}\NormalTok{other\_path, }\StringTok{"data/cats.csv"}\NormalTok{))}
-\FunctionTok{include\_graphics}\NormalTok{(}\FunctionTok{str\_c}\NormalTok{(params}\SpecialCharTok{$}\NormalTok{other\_path, }\StringTok{"figures/cat.jpg"}\NormalTok{))}
-\end{Highlighting}
-\end{Shaded}
-
-Finally, in your thesis folder's \textbf{index.Rmd} file, also create the parameter \texttt{other\_path}.
-But here, set it to where the \textbf{paper\_to\_include/} folder is relative to your thesis folder:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{"../paper\_to\_include/"}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{note-on-html-output}{%
-\subsubsection{Note on HTML output}\label{note-on-html-output}}
-
-Note that if you want to host an HTML version on your thesis online, you will need to include graphics in the content that you host online - the internet obviously won't be able to see filepaths that are just referring to stuff in another folder on your computer!
-
-\hypertarget{step-3-make-sure-header-levels-are-correct}{%
-\subsection{Step 3: Make sure header levels are correct}\label{step-3-make-sure-header-levels-are-correct}}
-
-Unless the paper you want to include is also written as a book, your header levels are probably going to be off.
-That is, the level 1 headers (\# Some header) you use for main sections in the other paper turns into chaper titles when included in your thesis.
-
-To avoid this, first \emph{increment all heading levels by one in \textbf{paper\_to\_include/my\_paper.Rmd}} (\# Some header -\textgreater{} \#\# Some header).
-Then in \textbf{paper\_to\_include/} create a \href{https://bookdown.org/yihui/rmarkdown-cookbook/lua-filters.html\#lua-filters}{lua filter} that decrements header levels by one: Create a text file, save it as \textbf{reduce\_header\_level.lua}, and give it the content below.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{function}\NormalTok{ Header}\OperatorTok{(}\NormalTok{el}\OperatorTok{)}
-  \ControlFlowTok{if} \OperatorTok{(}\NormalTok{el}\OperatorTok{.}\NormalTok{level }\OperatorTok{\textless{}=} \DecValTok{1}\OperatorTok{)} \ControlFlowTok{then}
-    \FunctionTok{error}\OperatorTok{(}\StringTok{"I don\textquotesingle{}t know how to decrease the level of h1"}\OperatorTok{)}
-  \ControlFlowTok{end}
-\NormalTok{  el}\OperatorTok{.}\NormalTok{level }\OperatorTok{=}\NormalTok{ el}\OperatorTok{.}\NormalTok{level }\OperatorTok{{-}} \DecValTok{1}
-  \ControlFlowTok{return}\NormalTok{ el}
-\KeywordTok{end}
-\end{Highlighting}
-\end{Shaded}
-
-In the YAML header of \textbf{paper\_to\_include/my\_paper.Rmd}, use this filter:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\PreprocessorTok{{-}{-}{-}}
-\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"A fabulous article in a different folder"}
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
-\FunctionTok{output}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{pdf\_document}\KeywordTok{:}\AttributeTok{ }
-\AttributeTok{    }\FunctionTok{pandoc\_args}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\StringTok{"{-}{-}lua{-}filter=reduce\_header\_level.lua"}\KeywordTok{]}
-\PreprocessorTok{{-}{-}{-}}
-\end{Highlighting}
-\end{Shaded}
-
-Now, your header levels will be correct both when you knit the paper on its own and when its included in your thesis.
-
-\hypertarget{step-4.-make-sure-figure-widths-are-correct}{%
-\subsection{Step 4. Make sure figure widths are correct}\label{step-4.-make-sure-figure-widths-are-correct}}
-
-It might be that your figure widths when knitting your paper on its own, and when including it in your thesis, need to be different.
-You can again use parameters to set figure widths.
-
-Imagine you want figure width to be 80\% of the page width when knitting your paper on its own, but 100\% in your thesis.
-In \textbf{paper\_to\_include/my\_paper.Rmd}, first add a parameter we could call \texttt{out\_width} and set it to the string ``80\%'':
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\PreprocessorTok{{-}{-}{-}}
-\FunctionTok{title}\KeywordTok{:}\AttributeTok{ }\StringTok{"A fabulous article in a different folder"}
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{""}
-\AttributeTok{  }\FunctionTok{out\_width}\KeywordTok{:}\AttributeTok{ }\StringTok{"80\%"}
-\FunctionTok{output}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{pdf\_document}\KeywordTok{:}\AttributeTok{ }
-\AttributeTok{    }\FunctionTok{pandoc\_args}\KeywordTok{:}\AttributeTok{ }\KeywordTok{[}\StringTok{"{-}{-}lua{-}filter=reduce\_header\_level.lua"}\KeywordTok{]}
-\PreprocessorTok{{-}{-}{-}}
-\end{Highlighting}
-\end{Shaded}
-
-Then, make sure use that parameter to set the output width when you include figures in \textbf{paper\_to\_include/my\_paper.Rmd}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}\{r, out.width=params$out\_width, fig.cap="A very funny cat"\}}
-\InformationTok{include\_graphics(str\_c(params$other\_path, "figures/cat.jpg"))}
-\InformationTok{\textasciigrave{}\textasciigrave{}\textasciigrave{}}
-\end{Highlighting}
-\end{Shaded}
-
-Finally, create the parameter \texttt{out\_width} in your thesis' \textbf{index.Rmd} file:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{params}\KeywordTok{:}
-\AttributeTok{  }\FunctionTok{other\_path}\KeywordTok{:}\AttributeTok{ }\StringTok{"../paper\_to\_include/"}
-\AttributeTok{  }\FunctionTok{out\_width}\KeywordTok{:}\AttributeTok{ }\StringTok{"80\%"}
-\end{Highlighting}
-\end{Shaded}
-
-Now, the output width of your figure will be 80\% when knitting your paper on its own, and 100\% when knitting it as child document of your thesis.
-
-\hypertarget{customizing-referencing}{%
-\section{Customizing referencing}\label{customizing-referencing}}
-
-\hypertarget{using-a-.csl-file-with-pandoc-instead-of-biblatex}{%
-\subsection{Using a .csl file with pandoc instead of biblatex}\label{using-a-.csl-file-with-pandoc-instead-of-biblatex}}
-
-The \texttt{oxforddown} package uses biblatex in LaTeX for referencing.
-It is also possible to use pandoc for referencing by providing a .csl file in the YAML header of \textbf{index.Rmd} (likely requiring commenting out the biblatex code in \textbf{templates/template.tex}).
-This may be helpful for those who have a .csl file describing the referencing format for a particular journal.
-However, note that this approach does not support chapter bibliographies (see Section \ref{biblatex-custom}).
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{csl}\KeywordTok{:}\AttributeTok{ ecology.csl}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{biblatex-custom}{%
-\subsection{Customizing biblatex and adding chapter bibliographies}\label{biblatex-custom}}
-
-This section provides one example of customizing biblatex. Much of this code was combined from searches on Stack Exchange and other sources (e.g.~\href{https://tex.stackexchange.com/questions/10682/suppress-in-biblatex}{here}).
-
-In \textbf{templates/template.tex}, one can replace the existing biblatex calls with the following to achieve referencing that looks like this:
-
-(Charmantier and Gienapp 2014)
-
-Charmantier, A. and P. Gienapp (2014). Climate change and timing of avian breeding and migration: evolutionary versus plastic changes. Evolutionary Applications 7(1):15--28. doi: 10.1111/eva.12126.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{\textbackslash{}usepackage}\NormalTok{[backend=biber,}
-\NormalTok{    bibencoding=utf8,}
-\NormalTok{    refsection=chapter, }\CommentTok{\% referencing by chapter}
-\NormalTok{    style=authoryear, }
-\NormalTok{    firstinits=true,}
-\NormalTok{    isbn=false,}
-\NormalTok{    doi=true,}
-\NormalTok{    url=false,}
-\NormalTok{    eprint=false,}
-\NormalTok{    related=false,}
-\NormalTok{    dashed=false,}
-\NormalTok{    clearlang=true,}
-\NormalTok{    maxcitenames=2,}
-\NormalTok{    mincitenames=1,}
-\NormalTok{    maxbibnames=10,}
-\NormalTok{    abbreviate=false,}
-\NormalTok{    minbibnames=3,}
-\NormalTok{    uniquelist=minyear,}
-\NormalTok{    sortcites=true,}
-\NormalTok{    date=year}
-\NormalTok{]\{}\ExtensionTok{biblatex}\NormalTok{\}}
-\FunctionTok{\textbackslash{}AtEveryBibitem}\NormalTok{\{}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}clearlist}\NormalTok{\{language\}}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}clearfield}\NormalTok{\{note\}}
-\NormalTok{\}}
-
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{\{titlecase\}\{}\FunctionTok{\textbackslash{}MakeTitleCase}\NormalTok{\{\#1\}\}}
-
-\FunctionTok{\textbackslash{}newrobustcmd}\NormalTok{\{}\FunctionTok{\textbackslash{}MakeTitleCase}\NormalTok{\}[1]\{}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}ifthenelse}\NormalTok{\{}\FunctionTok{\textbackslash{}ifcurrentfield}\NormalTok{\{booktitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{booksubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{maintitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{mainsubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{journaltitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{journalsubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{issuetitle\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifcurrentfield}\NormalTok{\{issuesubtitle\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{book\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvbook\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{bookinbook\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{booklet\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{suppbook\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{collection\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvcollection\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{suppcollection\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{manual\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{periodical\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{suppperiodical\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{proceedings\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvproceedings\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{reference\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{mvreference\}}\CommentTok{\%}
-    \FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{report\}}\FunctionTok{\textbackslash{}OR\textbackslash{}ifentrytype}\NormalTok{\{thesis\}\}}
-\NormalTok{    \{\#1\}}
-\NormalTok{    \{}\FunctionTok{\textbackslash{}MakeSentenceCase}\NormalTok{\{\#1\}\}\}}
-    
-\CommentTok{\% \textbackslash{}renewbibmacro\{in:\}\{\}}
-\CommentTok{\% suppress "in" for articles}
-\CommentTok{\% }
-\FunctionTok{\textbackslash{}renewbibmacro}\NormalTok{\{in:\}\{}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}ifentrytype}\NormalTok{\{article\}\{\}\{}\FunctionTok{\textbackslash{}printtext}\NormalTok{\{}\FunctionTok{\textbackslash{}bibstring}\NormalTok{\{in\}}\FunctionTok{\textbackslash{}intitlepunct}\NormalTok{\}\}\}}
-\CommentTok{\%{-}{-} no "quotes" around titles of chapters/article titles}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article, inbook, incollection, inproceedings, misc, thesis, unpublished]}
-\NormalTok{\{title\}\{\#1\}}
-\CommentTok{\%{-}{-} no punctuation after volume}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article]}
-\NormalTok{\{volume\}\{\{\#1\}\}}
-\CommentTok{\%{-}{-} puts number/issue between brackets}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article, inbook, incollection, inproceedings, misc, thesis, unpublished]}
-\NormalTok{\{number\}\{}\FunctionTok{\textbackslash{}mkbibparens}\NormalTok{\{\#1\}\} }
-\CommentTok{\%{-}{-} and then for articles directly the pages w/o any "pages" or "pp." }
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[article]}
-\NormalTok{\{pages\}\{\#1\}}
-\CommentTok{\%{-}{-} for some types replace "pages" by "p."}
-\FunctionTok{\textbackslash{}DeclareFieldFormat}\NormalTok{[inproceedings, incollection, inbook]}
-\NormalTok{\{pages\}\{p. \#1\}}
-\CommentTok{\%{-}{-} format 16(4):224{-}{-}225 for articles}
-\FunctionTok{\textbackslash{}renewbibmacro*}\NormalTok{\{volume+number+eid\}\{}
-  \FunctionTok{\textbackslash{}printfield}\NormalTok{\{volume\}}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}printfield}\NormalTok{\{number\}}\CommentTok{\%}
-  \FunctionTok{\textbackslash{}printunit}\NormalTok{\{}\FunctionTok{\textbackslash{}addcolon}\NormalTok{\}}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-If you would like chapter bibliographies, in addition insert the following code at the end of each chapter, and comment out the entire REFERENCES section at the end of template.tex.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\textbackslash{}printbibliography}\NormalTok{[segment=}\FunctionTok{\textbackslash{}therefsection}\NormalTok{,heading=subbibliography]}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{customizing-the-page-headers-and-footers-pdf}{%
-\section{Customizing the page headers and footers (PDF)}\label{customizing-the-page-headers-and-footers-pdf}}
-
-This can now be done directly in \textbf{index.Rmd}'s YAML header.
-If you are a LaTeX expert and need further customisation that what's currently provided, you can tweak the relevant sections of \textbf{templates/template.tex} - the relevant code is beneath the line that begins \texttt{\textbackslash{}usepackage\{fancyhdr\}}.
-
-\hypertarget{diving-in-to-the-oxthesis-latex-template-pdf}{%
-\section{Diving in to the OxThesis LaTeX template (PDF)}\label{diving-in-to-the-oxthesis-latex-template-pdf}}
-
-For LaTeX minded people, you can read through \textbf{templates/template.tex} to see which additional customisation options are available as well as \textbf{templates/ociamthesis.cls} which supplies the base class.
-For example, \textbf{template.tex} provides an option for master's degree submissions, which changes identifying information to candidate number and includes a word count.
-At the time of writing, you must set this directly in \textbf{template.tex} rather than from the YAML header in \textbf{index.Rmd}.
-
-\hypertarget{customising-to-a-different-university}{%
-\section{Customising to a different university}\label{customising-to-a-different-university}}
-
-\hypertarget{the-minimal-route}{%
-\subsection{The minimal route}\label{the-minimal-route}}
-
-If the front matter in the OxThesis LaTeX template is suitable to your university, customising \texttt{oxforddown} to your needs could be as simple as putting the name of your institution and the path to your university's logo in \textbf{index.Rmd}:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{university}\KeywordTok{:}\AttributeTok{ University of You}
-\FunctionTok{university{-}logo}\KeywordTok{:}\AttributeTok{ figures/your{-}logo{-}here.pdf}
-\end{Highlighting}
-\end{Shaded}
-
-\hypertarget{replacing-the-entire-title-page-with-your-required-content}{%
-\subsection{Replacing the entire title page with your required content}\label{replacing-the-entire-title-page-with-your-required-content}}
-
-If you have a \textbf{.tex} file with some required front matter from your university that you want to replace the OxThesis template's title page altogether, you can provide a filepath to this file in \textbf{index.Rmd}.
-\texttt{oxforddown}'s sample content includes and example of this --- if you use the YAML below, your front matter will look like this:
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{alternative{-}title{-}page}\KeywordTok{:}\AttributeTok{ front{-}and{-}back{-}matter/alt{-}title{-}page{-}example.tex}
-\end{Highlighting}
-\end{Shaded}
-
-\noindent
-\fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000001.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000002.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000003.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000004.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000005.pdf}} \fbox{\includegraphics[width=0.32\linewidth]{figures/sample-content/alt_frontmatter_example/split/_000006.pdf}}
+\hypertarget{background}{%
+\section{\texorpdfstring{\textbf{Background}}{Background}}\label{background}}
+
+The modern micro-finance (MF) industry draws its popularity from the promise of providing appropriate and affordable financial services to the population under-served by mainstream financial intermediaries \autocite{morduch1999microfinance,morduch2000microfinance}. The motivation for reaching out to the unbanked draws from researchers and development practitioners view that financial inclusion leads to welfare improvements for the recipients. As examples, some scholars associate access to finance with more business start-ups, higher savings rate, improved health, less child mortality, and higher education attainment by the poor, although other scholars downplay these findings \autocite{klapper2015role,o2017systematic,shahriar2017lender}. Much of the initial efforts to provide financial services to the unbanked rested on Microfinance. Microfinance refers to either the practice of delivering appropriate and affordable financial facilities to the financially excluded or the providers of such services \autocite{ledgerwood2006transforming}.
+
+Pioneer Microfinance Institutions (MFIs), like Grameen Bank, mostly operated as Non-Governmental Organisations (NGOs) following the welfare approach, where the profitability of the institution played second to availing financial services to the poor \autocite{chahine2010social,d2017ngos}. However, the paradigm shift is towards the financial systems approach where MFIs operate under market principles, leading to charges of ``financialisation'' of poverty \autocite{mader2015financialization}, with the relatively higher interest rates charged to the clients equated to a ``poverty penalty'' \autocite{chen2017microfinance}. Some scholars and practitioners argue that MFIs following the profit-oriented financial systems model, though more financially sustainable, are subject to ``mission drift''. Mission drift refers to situations where MFIs lessens their commitment to availing financial services to the financially excluded to pursue profits \autocite{jia2016commercialization,mia2017mission}.
+
+However, given the social mission inherent in MF, MFIs following the financial systems approach risk their legitimacy in society and local and international donor community, a significant source of funding even for commercial MFIs \autocite{nason2018behavioral}. For these reasons, some researchers and development practitioners vouch for the welfare approach, where MFIs focus primarily on the mission to reach the financially excluded without emphasizing profits. Most MFIs following the welfare approach are non-governmental organizations (NGOs). Though not subject to mission drift, the NGO model is over-reliant on volatile local and international donor funds and government subsidies \autocite{garmaise2013cheap,d2017aid}. Additionally, NGOs may crowd out the efficient, market-based microfinance providers \autocite{kota2007}, which may hurt aggregate welfare in the long run.
+
+The win-win school attempts to reconcile the financial systems and welfare approach to microfinance. Adherents of the win-win school postulate that it is possible to achieve both financial sustainability (that is, turn a profit) and, at the same time, reach the financially excluded \autocite{kodongo2013individual}. As a case in point, some researchers argue that MFIs could strive to generate profits by offering financial services to the relatively well-off at market rates. The MFIs could then use the returns to subsidise the provision of financial services to the poor under a form of price discrimination, leading to ``mission expansion'' as opposed to mission drift \autocite{mersland2010microfinance}.
+
+Globally, the shift from the pure welfare approach of MF provision is gaining ground. Most of the transformed MFIs operate at some point on the continuum between the NGO, welfare model and the financial systems approach \autocite{armendariz2013subsidy,d2013unsubsidized,hishigsuren2006transformation}. It all started in 1992 in Bolivia when Prodem, an NGO, converted to a commercial bank, Bancosol \autocite{fernando2004micro,creedy2018types}. Since then, many MFIs worldwide have converted from NGOs to commercial firms seeking to make profits.
+
+This article explores the factors that drive the transformation of MFIs from NGOs to for-profit firms in Africa. To this end, we use a panel dataset of 705 MFIs in Africa from the MIX pooled database, with additional data from the World Bank- the World Development Indicators (WDI), the Worldwide Governance Index (WGI), and the Global Financial Development Databases (GFDD). We focus on Africa given the relatively low levels of financial inclusion on the continent \autocite{demirguc2018global}and the shortcomings inherent in combining data from different regions that may yield results that are not actionable. As \textcite{d2017ngos} and \textcite{wang2015ownership} suggest, the nature and performance of MFIs are country-specific. Hence, research focusing on particular regions, countries or even firms could better inform policy making.
+
+This article contributes to the literature in two main ways. First, the study sheds light on the drivers of the transformation of microfinance institutions in Africa. Much of the literature has not examined this phenomenon, focusing on the shift's consequences and how MFIs can balance financial and social missions \autocite{d2013unsubsidized,forkusam2014does,mia2017mission}. We believe that our analysis could form a reasonable starting point for analysing the transformation of MFIs in other regions or countries. Second, we detail the linkages between the drivers of micro-finance institutions' transformation, showing how they interact to change the likelihood of conversion. We highlight the pitfalls that bedevil analysis pools data from heterogeneous sources, which may mask crucial differences or similarities between the analysis units.
+
+The rest of the article is structured as follows. Section 2 presents the theoretical underpinnings and empirical findings related to the study. Subsequently, in section 3, we offer a summary of findings before delving into the analysis method and results in sections 4 and 5, respectively. Section 6 concludes.
+
+\hypertarget{related-literature}{%
+\section{Related Literature}\label{related-literature}}
+
+Much of the early literature on the institutional change of MFIs dealt with the theoretical, philosophical, and historical basis for the transformation of MFIs from NGOs to commercial firms and the potential impacts of such conversion {[}\textcite{campion1999institutional}; christen2001commercialization; \textcite{gutierrez201920}; \textcite{zaby2019science}{]}. Views of scholars regarding the transformation of MFIs drew from the institutional theory on the persistence and convergence in organisations, including change and de-institutionalisation within firms \autocite{scott2004institutional} and the dominance of neoliberalism after the end of the cold war \autocite{ostry2017}.
+
+The institutional theory holds that the institutional environment is more influential in developing formal structures in organisations than market pressures \autocite{maggio1991}. Coercion is one form of pressure from the institutional environment that makes organisations adopt institutional structures and practices. Institutional theorists note that stakeholders could force firms to adopt specific organisational structures and practices without critical scrutiny to gain legitimacy in the institutional environment \autocite{scott2004institutional,martinez2017coercive}.
+
+With this hindsight, \textcite{bateman2010doesn} traces the pressure to convert MFIs from NGOs to the commercial model to the rise of neo-liberalism and the insistence that firms be financially self-sufficient instead of relying on government subsidies and, in the case of MFIs, donor funds. The wave of economic liberalisation and privatisation commenced in the early 1990s due to neo-liberalism \autocite{silva1998neoliberalism}. Researchers point to pressure from financiers of MF such as USAID and the World Bank as a significant driver for the decision for MFIs to transform \autocite{ostry2017}.
+
+However, given that MFIs have a social mission, the transition to a market-led positioning is bound to conflict with the social objectives and threaten the MF industry's legitimacy \autocite{ramus2017,nason2018behavioral}. Specifically, the quest to satisfy both financial objectives and the social mission is likely to conflict, which may cause ``mission drift'' \autocite{mersland2010microfinance,mia2017mission}, where MFIs give greater priority to profitability than outreach to the unbanked.
+
+Nonetheless, the push from donors to transform MFIs seems to contradict the slow pace of the transformation. NGOs still form a substantial proportion of MFIs in Africa, accounting for 32\%, second only to Non-Bank Financial Institutions (NBFIs) at 40\% \autocite{market2018global}. A question arises regarding the factors behind the persistence of certain organisational forms of MFI provision in Africa and across the globe. \textcite{pashkova2016business} tackled this question. They found that the cooperative model is prevalent in economies with civil law systems, low inflation levels, and high economic growth rates.
+
+In contrast, NGO type MFIs feature in countries with high inflation rates and low economic growth levels, meaning that NGOs help the poor cope during challenging economic times. The commercial banking model features most in economies with common law legal systems. However, the study by Pashkova, et al.~does not explicitly address the transformation question; factors that determine the transformation of MFIs from NGOs to a commercial model addressed this article.
+
+The capacity of the capital markets and its antecedents may raise the propensity for the transformation of MFIs. MFIs located in countries with well-developed capital markets can efficiently issue debt and equity instruments and raise public deposits \autocite{allen2013resolving,allen2014african}. Available literature points to legal tradition, governance and education as drivers of financial development in a country \autocite{rajan1998financial,baltagi2009financial} and which, by extension, drives economic growth going by the financial development-economic growth nexus literature \autocite{claessens2003financial}. The size of an MFI in terms of assets base, structure, and tangibility could enhance its capital acquisition capacity in line with the trade-off theory of capital structure \autocite{barclay2005capital,gwatidzo2009corporate,ojah2016effects}.
+
+\textcite{ledgerwood2006transforming} attribute the financing structure, hence the organisational form of an MFI, to the institutional life cycle. For instance, in the early stages, most MFIs operate as NGOs relying on donations and concessionary funds, given that commercial funders deem them too risky. Later, they supplement their funding through government subsidies and equity funding from NGOs and public investors. In the final consolidation phase, most MFIs rely on debt, using foreign donors as guarantees and deposits, and increasingly adopt the commercial model. Thus, the age of an MFI may have a bearing on both the capital structure and organisational structure, with firm-level, country and regional, disparities attributable to regulatory provisions relating to the ways MFIs can raise capital and historical legacies on saving and lending \autocite{bayai2016financing}. The agency conflict that follows the introduction of debt and equity brings to the fore the potential conflict between optimising financial returns and the quest to stick to the social mission of MFIs, the second central strand of research on MFI conversion \autocite{nurmakhanova2015trade,bayai2016financing,abdulai2017trade,awaworyi2018sustainability}.
+
+Quality of institutions features prominently in explaining the investment climate in a country. The famed ``Lucas Paradox'' has primarily been explained away by the differences in, among others, the institutions, especially the capacity to enter into and enforce contracts and guarantees against state appropriation of private property - property rights \autocite{azemar2013has,goktan2015explanation}. MFI transformation connotes the entry of private, profit-oriented capital that seeks returns and favours countries with refined institutions. Moreover, researchers have variously cited the quality of institutions as drivers of the ease to which firms, MFIs included, can access private funds by fostering a well developed financial ecosystem \autocite{huang2010political,kaidi2019financial}. In this case, the financial system would include equity and debt markets where private investors could buy stakes in or lend funds to the MFIs that seek to go commercial. The next section highlights the results of the study.
+
+\hypertarget{summary-of-results}{%
+\section{Summary of Results}\label{summary-of-results}}
+
+The output from analysis of the data shows that at the country level, it is legal tradition, stock markets development, and governance (institutional quality) that relate to the likelihood of the transformation of MFIs. At the firm level, the age and size of the MFI raise the probability of conversion. There is also a robust time trend towards commercialization of MFIs which points to increased acceptance of microfinance's financial systems approach. Regional disparities are also evident with North Africa represented by NGOs in the sample data, probably due to religious constraints. GDP growth rate and education levels are not significant determinants of the probability of transformation. However, like the stock market to GDP, private credit to GDP has a negative coefficient.
+
+Precisely, the probability of an MFI transforming declines with the increase in age, with older MFIs more likely to follow the NGO model than younger MFIs. In contrast, bigger MFIs have a higher likelihood of transforming to the commercial model, while smaller MFIs retain the NGO status. Also, MFIs in common law countries have a higher chance of changing than those in civil law countries. However, it is MFIs located in countries with other legal traditions (that is, not civil or common - see Appendix 6) that have the highest probability of going commercial. Stock market development relates negatively with the likelihood of transformation of MFIs, likely because people in countries with well developed financial markets are more likely served by the mainstream financial system, relying less on microfinance. However, only stock market development is a significant driver, with private credit being a negative but insignificant driver of transformation. As expected, governance/ institutional quality positively relates to the chance of a conversion. Regionally, the sample data has only NGOs for North Africa, reflecting religious constraints to for-profit microfinance lending in majority Muslim countries. Importantly, there is a potent time trend towards commercialisation of MFIs which points to a triumph of the financial systems approach to microfinance over the welfare model. GDP growth rate shows mixed results but is insignificant. In the next section, we highlight the methodology applied in the study.
+
+\hypertarget{method}{%
+\section{Method}\label{method}}
+
+The article uses two approaches; the logit and probit models and the multinomial logit model, given that our dependent variable is discrete and error terms may not be normally distributed \autocite{cramer2002origins}. For the logit and probit models, MFIs following the NGO model take a code of zero and one for NBFIs, credit unions/ cooperatives, and rural banks. For the multinomial logit model, NGOs still take a zero code, with commercial banks, NBFIs, credit unions, and Rural Banks taking one, two, three, and four, respectively. The next section lays out and describes the models, variables, and data sources.
+
+\hypertarget{the-model-variables-description-and-data-sources}{%
+\subsection{The Model, Variables Description and Data Sources}\label{the-model-variables-description-and-data-sources}}
+
+We use the model below to run both logit and probit regressions on a panel dataset of 705 MFIs in Africa. Assuming the error term \(\epsilon\) follows a logistic distribution \autocite{czepiel2002maximum}, we have,
+
+\begin{equation}
+y_{it} = log(\frac{p_{it}}{(1-p_{it})} ) = \alpha + x_{it} + \varepsilon_{it}
+\end{equation}
+
+where,
+
+\begin{equation}
+p_{it}  =  \frac{1}{1 +  e^{- z_{it} } } 
+\end{equation}
+
+and
+
+\begin{equation}
+1 + p_{it}  =  \frac{1}{1 +  e^{z_{it} } }
+\end{equation}
+
+for \(z_{it} = f(x_{it})\)
+
+In the model, \(y_{it}\) is the current legal status of the MFI, the dependent variable. The dependent variable is a dummy with NGOs, the base outcome (coded zero), and other legal traditions take a code of one. The symbol \(x_{it}\) represents a vector of independent variables- age, size, capital market development, legal tradition, GDP growth rate, and institutional quality. Additionally, we include year dummies to cater to the trends towards commercialisation.
+
+The multinomial logit model extends the binary logit model to more than two unordered levels (discrete choices). The data at hand meets the requirements for running a multinomial logit model as the dependent variable (the legal status of each MFI) has one outcome for each case. Also, the independent variables do not faultlessly predict the dependent variable \autocite{petrucci2009primer}. Suppose we have a dependent variable \(y\) consisting of \(K\) choices for \(K>=2\). Further, let the independent variables be \(x_1, x_2,………. x_n\), then we can specify the multinomial logit model as follows.
+
+\begin{equation}
+log(\frac{prob(k/X)}{prob(K/X)}) =   \beta_{0}^{k}  x_{0}  + \beta_{1}^{k}  x_{1} +  \cdots + \beta_{p}^{k}  x_{p}
+\end{equation}
+
+for \(k = 1 \cdots K-1\)
+
+\(y\) is the dependent variable, in this case, one of NGO, commercial bank, NBFI, credit union or rural bank.
+
+\(x\) is a vector of independent variables.
+
+If \(K>2\), then we have a multinomial logit with \(K-1\) set of equations. Where \(K=2\), the model is the binary logit model denoted in equation one (1) where we have one equation. Note that in this case, we have arbitrarily assigned the last category (K) as the reference. Any other group can serve as a reference and hence not be part of the equations set.
+
+One of the significant drawbacks of the multinomial logit is the violation of the assumption of the independence of irrelevant alternatives (IIA). \textcite{cheng2007testing} ) illustrate this assumption using the blue bus- red bus example. If the choice between car transport and a red bus, and given that the probability of choosing a bus is \(0.8\), and \(0.2\) for a car, then the bus's odds over car transport is 4. Suppose we introduce a third alternative, the blue bus. If the probabilities of choosing a red bus, blue bus, and car transport are \(0.6\), \(0.25\), \(0.15\), respectively, the assumption holds since the odds of selecting a red bus over a car are still \(4\). If the odds are different from \(4\), then the model violates the IIA, and the multinomial model is not fit for the data. In our case, we plausibly see the assumption holding because the legal status of an individual MFI is independent of the legal status of other MFIs. Table 1 (next page) describes the variables in detail.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-24}Description of Variables}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X}
+\toprule
+Variable\_Description\\
+\midrule
+1. Current Legal Status (Dependent Variable): This is the dependent variable. For logit and probit models, we create a dummy with the MFIs following the NGO Model getting a code of zero, and one in the case of non-bank financial institutions (NBFIs), rural banks, and credit unions/ cooperatives. We assign codes of zero to four for the multinomial logit model for NGOs, Banks, NBFIs, Cooperatives and Rural Banks, respectively. The data are available from the Microfinance Information Exchange, MIX (See source on note 1).\\
+\\
+2.  Age: The period in which the MFI has been in operation. MFIs fall into one of three groups: new (1-4 years), young (4-8 years), and mature (over 8 years). The data are available from MIX.\\
+\\
+3. Legal Tradition (Legal): The indicator is a dummy variable with common law countries coded 0, civil law countries 1, and 2 otherwise as per the classification by Oto-Peralías and Romero-Ávila (2014).\\
+\addlinespace
+\\
+4. Size (Log of Total Assets): We proxy the size of MFI with the natural logarithm of total assets, again using MIX data.\\
+\\
+5. Governance/ Institutional Quality (KKM): We take the first principal component of the WGI developed by Daniel Kaufmann, Aart Kraay and Massimo Mastruzzi (KKM) available on the World Bank's Worldwide Governance Indicators, WGI (See source on note 3).\\
+\\
+\addlinespace
+6. Private Credit to GDP: We capture the total amount of credit advanced to the private sector by financial intermediaries as a proxy for capital markets development concerning the banking sector following Ito and Kawai (2018). The data source is the Global Financial Development Database (GFDD) of the World Bank (See note 4).\\
+\\
+7. Stock market capitalisation to GDP: We capture the  extent of stock market development using the ratio of stock market capitalisation to GDP to proxy how firms can raise equity capital. Although Africa's equity markets are thin, some relatively large stock markets like South Africa, Kenya, and Ghana exist. The data are from the GFDD.\\
+\\
+8. GDP annual growth rate (GDP): This is the year on year growth in output adjusted for inflation and sourced from the World Development Indicators (WDI) (See note 2).\\
+\addlinespace
+\\
+9. Education (EDUC): The indicator is a ratio of the gross enrolment in secondary school to the gross primary school enrolment as defined in the literature (Allen et al., 2013, 2014). The data are from the WDI.\\
+\\
+\bottomrule
+\multicolumn{1}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}Authors' construction from the literature}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textit{Notes}}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{1} MIX Database on www.themix.org and https://datacatalog.worldbank.org/dataset/mix-market}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{2} WDI on https://databank.worldbank.org/source/world-development-indicators.}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{3} WGI/ KKM on https://databank.worldbank.org/source/worldwide-governance-indicators.}\\
+\multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{4} GFDD on https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database}\\
+\end{tabu}
+\end{table}
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+\hypertarget{exploratory-data-analysis}{%
+\subsection{Exploratory Data Analysis}\label{exploratory-data-analysis}}
+
+In this section, we visualise the data and then summarise the variables in the model.
+
+\hypertarget{data-visualisation}{%
+\subsubsection{Data visualisation}\label{data-visualisation}}
+
+Figure 1 below shows the summary statistics and scatter plots for the independent numeric variables. The summaries show a high correlation between education on the one hand and private bond market capitalisation to GDP, stock market capitalisation to GDP, and private credit to GDP on the other at around 0.5. As literature shows, higher education levels coincide with greater participation of individuals in capital markets as financial inclusion levels drop \autocite{allen2013resolving,allen2014african}. The stock market capitalisation to GDP and private bond market capitalisation to GDP correlates vastly, at 0.73, which indicates the concomitant maturity of capital markets. Typically, debt markets mature first, followed by stock markets and their development levels are correlated \autocite{levine1999stock}. Other variables that show a high correlation include private credit to GDP on the one hand and private bond market capitalisation to GDP, and stock market capitalisation to GDP at 0.32 and 0.47. Institutional quality (KKM) also correlates with education, private credit to GDP and private bond market capitalisation \autocite{yartey2008determinants}.
+
+With this hindsight, we drop education and private bond market capitalisation from the model. Note that much of the private credit to GDP ratio's variation already reflected in the stock market to GDP ratio. Also, education reflects in general capital market development as documented in the literature. We also note that North Africa has only NGOs in the model, perhaps due to faith \autocite{allen2013resolving,allen2014african,hassan2018religious}. Hence, exclude region in the model. There could be country-specific effects that we capture using the quality of governance (KKM) \autocite{kunvcivc2014institutional} and the annual GDP growth rate \autocite{butkiewicz2006institutional}.
+
+Figure 2 shows that mature MFIs dominate the dataset across all legal statuses and particularly dominant among rural banks, NGOs, and cooperatives. Turning to the prevalence of MFIs by legal status, cooperatives dominate civil law countries. Simultaneously, NGOs, NBFIs, commercial banks and rural banks are dominant in common law countries, which researchers have documented \autocite{pashkova2016business}. For other legal traditions, NBFIs and cooperatives dominate. As noted, North Africa has only NGOs in the dataset, which could indicate the religious constraints towards interest charging financial intermediaries \autocite{hassan2018religious}. Finally, while commercial banks and NBFIs show a higher asset base, NGOs and credit unions are not large. Commercial banks would be more extensive due to statutory minimum capital requirement resulting from their desire to optimise economies of scale \autocite{aiyar2016does}.
+
+Turning to Figure 3, country-level governance matter more for commercial MFIs- commercial banks and NBFIs, compared to NGOs and rural banks in line with the link in the literature between investment, governance, and property rights \autocite{claessens2003financial}. Commercial banks, rural banks, and NGOs dominate countries with higher stock market development levels, while NBFIs and cooperatives trail, noting that cooperatives may be relatively less inclined to obtain funding from stock markets \autocite{porter1987economic}. The result could indicate the importance of equity capital for commercial banks and NGOs, while NBFIs tend to rely more on private equity and debt. Indeed, the data shows NBFIs dominate in countries where private credit to GDP is highest, followed by cooperatives and NGOs, while commercial banks and rural banks come last.
+
+Lastly, commercial banks, NBFIs and rural banks tend to dominate countries with higher GDP growth rates. Higher GDP growth implies higher profitability which in turn allows commercial MFIs to thrive. Low GDP growth means that the not-for\_profit NGOs and member-oriented cooperatives tend to succeed as a cushion to the vulnerable in society and fill the void left by the commercial MFIs.
+
+\newpage
+
+\begin{landscape}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/unnamed-chunk-25-1.pdf}
+\caption{\label{fig:unnamed-chunk-25}Correlations Between Independent Variables}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/unnamed-chunk-30-1.pdf}
+\caption{\label{fig:unnamed-chunk-30}Distribution and Asset Base of MFIs in Africa by Legal Status}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/unnamed-chunk-31-1.pdf}
+\caption{\label{fig:unnamed-chunk-31}Governance, Capital Market Development and Legal Status of MFIs in Africa}
+\end{figure}
+
+\end{landscape}
+
+\newpage
+
+\hypertarget{summary-statistics}{%
+\subsubsection{Summary Statistics}\label{summary-statistics}}
+
+Categorical variables summarised in Table 2 have no missing values. There are 1,280 NGOs against 3502 MFIs that are either commercial banks (619), NBFIs (1318), cooperatives (1427), and rural banks (138). As noted, even with the transformation of MFIs, NGOs still form a substantial number of MFIs, with the country to country variations \autocite{d2017ngos}. While 2558 MFIs are mature, 1200 are new, and 1024 are young. The result may indicate a slowdown in the establishment of new MFIs as donations become more unreliable. 1877 MFIs are from common law countries, with Civil law countries accounting for 1849, while 1056 come from other legal traditions. It is notable, as shown in Appendix 6, that most countries in Africa are either common law (18) or civil law(19), with very few nations in the `other' legal traditions category (11) \autocite{oto2014distribution}. It is also worth noting that North Africa accounts for only 166 observations in the data against 4616 observations in the sample dataset. Table 3 shows the summary statistics for the numeric variables where assets, governance (KKM), and GDP growth rates account for the highest variation.
+
+Table 4 and Table 7 shows that NGOs, NBFIs, and commercial banks dominate common law countries. In civil law countries, it is cooperatives, NGOs, and NFIs that are most prevalent. In other legal traditions, it is NBFIs and credit unions that dominate. The result could indicate that the relatively well-developed capital markets in common law countries allow private, for-profit MFIs to thrive while not displacing NGOs. It means that NGOs in common law countries mostly serve niche markets where commercial MFIs find it uneconomical to reach. Weak capital markets in civil law countries mean that cooperatives are central, with NGOs playing a significant role. Commercial MFIs like commercial banks and cooperatives presence is low due to capital constraints. Turning to age in Table 5, most of the mature MFIs in the sample data are cooperatives, NGOs, and commercial banks in that order, while most of the new MFIs are NBFIs, cooperatives and commercial banks, respectively. The results could indicate the increasing acceptance of the commercial model with newer MFIs going commercial. Table 6 shows the correlation between age and size, with larger MFIs more likely to be older.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-32}Summary statistics for categorical variables}
+\centering
+\begin{tabular}[t]{ll}
+\toprule
+Variable & Counts\\
+\midrule
+currentlegaldummy & oth: 3502, NGO: 1280\\
+currentlegalstatus & Coo: 1427, NBF: 1318, NGO: 1280, Ban: 619\\
+age & Mat: 2558, New: 1200, You: 1024\\
+legal\_tradition & Com: 1877, Civ: 1849, Oth: 1056\\
+region & Afr: 4616, Nor: 166\\
+\bottomrule
+\multicolumn{2}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-33}Summary statistics for numeric variables}
+\centering
+\begin{tabular}[t]{lrrrrrrrr}
+\toprule
+Variable & Complete & Mean & SD & Min & Q1 & Median & Q3 & Max\\
+\midrule
+assets & 1 & 14.946 & 2.262 & 0.693 & 13.540 & 14.858 & 16.416 & 22.98\\
+kkm & 1 & 0.003 & 2.006 & -5.233 & -1.304 & -0.114 & 1.628 & 7.37\\
+education & 1 & 0.387 & 0.144 & 0.075 & 0.273 & 0.386 & 0.487 & 1.05\\
+pcrdbgdp & 1 & 2.719 & 0.685 & 0.298 & 2.386 & 2.758 & 3.052 & 6.88\\
+stmktcap & 1 & 1.141 & 1.473 & 0.000 & 0.000 & 0.000 & 2.428 & 5.80\\
+\addlinespace
+prbonds & 1 & 0.632 & 1.093 & 0.000 & 0.000 & 0.000 & 1.130 & 4.36\\
+gdp\_growth\_annual & 1 & 5.310 & 3.590 & -46.082 & 4.000 & 5.420 & 6.723 & 33.63\\
+\bottomrule
+\multicolumn{9}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{9}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-34}Legal Status of MFIs in Africa by Disaggregated by Legal Tradition}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+  & NGO & Bank & NBFI & Coop & Rural Bank\\
+\midrule
+Common & 0.323 & 0.246 & 0.310 & 0.048 & 0.073\\
+Civil & 0.304 & 0.014 & 0.158 & 0.524 & 0.001\\
+Other & 0.106 & 0.126 & 0.420 & 0.348 & 0.000\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{1} Horizontals total to 100}\\
+\end{tabular}
+\end{table}
+
+\newpage
+
+\hypertarget{results-of-the-regression-model}{%
+\subsection{Results of the Regression Model}\label{results-of-the-regression-model}}
+
+Table 11 shows the output from both the logit and probit regression analysis. We ran the analysis using the full dataset, then filter MFIs with three or more years and five or more years of data and rerun the regression. While most of the variables are significant, it is notable that there is also a robust time trend towards commercialisation of MFIs, indicating relatively fewer NGO type MFIs over time. The trend is indicative of the gains that the sustainability school has made. However, NGOs still form a substantial proportion of MFIs. In this section, we examine each variable and its relative contribution to the transformation of MFIs. Note that we use the logit model in column 1 of Table 9 to interpret the discussion results. However, the interpretation is also valid for the other models presented in the Table.
+
+\hypertarget{age}{%
+\subsubsection{Age}\label{age}}
+
+New MFIs are more likely to adopt a commercial model than either young or mature ones, given the coefficients' negative sign. The observation may reflect the increasing acceptance of the financial systems approach to microfinance, making it harder for new entrants to attract donor funding \autocite{d2017ngos}. We postulate that older MFIs, being the pioneers and hence already are well-acquainted with donors, find it easier to continue raising funds through donations and elicit state subsidies \autocite{d2013unsubsidized,mia2017mission}. Established MFIs have a historical relationship with donors. They are likely to attract funds, more so from donors that favour the welfare approach to microfinance of reaching out to the financially excluded first before pursuing profits. The results are in line with those in Table 5, which shows the distribution of MFI legal status disaggregated by age. While only 18\% of NGOs are new, over 30\% are mature, an upward trend. By comparison, the other legal status either decline or are relatively constant.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-35}Legal Status of MFIs in Africa by Disaggregated by Age}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+  & NGO & Bank & NBFI & Coop & Rural Bank\\
+\midrule
+New & 0.188 & 0.193 & 0.297 & 0.295 & 0.027\\
+Young & 0.273 & 0.099 & 0.334 & 0.275 & 0.019\\
+Mature & 0.303 & 0.112 & 0.242 & 0.309 & 0.034\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabular}
+\end{table}
+
+Examining the coefficients, when an MFI rises from being new to young, it is 0.474 as likely to be in the commercial category than the new MFIs, ceteris paribus. This result means that new MFIs are likely to be commercial while older MFIs are most likely NGOs. \footnote{Relative risk ratios allow for easier interpretation of the logit models. To compute the ratio, we exponentiate the coefficients. For instance, the coefficient for young MFIs is -0.747, so the relative risk ratio is \(e^{-0.747}\) which gives 0.474. In other words, the odds of having commercial model of microfinance is 1 - 0.474 = 0.526 in the sample dataset.}, we find that keeping all the other variables constant, young MFIs roughly one half less likely to be commercial than new MFIs. Likewise, mature MFIs are a third as likely to be commercial compared to new MFIs. The finding is also consistent with the intense time effect towards commercialisation which points to the increased acceptance of the commercial model of MFIs.
+
+Having started their operations before the neo-liberal tradition took hold, older MFIs have created goodwill with donors that enable them to solicit donations and subsidies easily. Mature MFIs could also have evolved business models that allow them to be financially sustainable without converting to the commercial model. For instance, mature MFIs tend to have a broader asset base meaning they have a more diverse customer base (see Table 6). Besides, they may have embedded the emphasis on the social mission in their vision, mission, and organisational cultures to such an extent that both the MFI and the donor community find it hard to pull back \autocite{ramus2017,berbegal2019impact}.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-36}Size (Assets) of MFIs in Africa by Disaggregated by Age}
+\centering
+\begin{tabular}[t]{lrrrr}
+\toprule
+Age & Min\_size & Mean\_size & Median\_size & Max\_size\\
+\midrule
+New & 0.693 & 13.5 & 13.5 & 23.0\\
+Young & 5.796 & 14.5 & 14.4 & 19.8\\
+Mature & 6.361 & 15.8 & 15.7 & 22.9\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabular}
+\end{table}
+
+Younger MFIs, on the other hand, cropped up when the paradigm shift to the institutional approach was taking shape. It means, therefore, that donors were reluctant to extend funds to such organisations. Hence, the MFIs had to supplement the little donor funding and government subsidies by raising funds from the capital markets. The thinking is consistent with the literature that shows the extent to which donor funding is volatile and especially sensitive to geopolitical realignments \autocite{garmaise2013cheap,d2017aid} and business cycles \autocite{wagner2013vulnerability}.
+
+\hypertarget{legal-tradition}{%
+\subsubsection{Legal Tradition}\label{legal-tradition}}
+
+As noted, we have grouped countries in the sample data into their respective legal traditions following \textcite{oto2014distribution}. MFIs in civil law countries have a higher chance of transformation compared to those from common law countries \footnote{Appendix 6 shows a breakdown of the legal traditions in Africa}. However, MFIs located in countries under ``other'' legal traditions have the highest likelihood of adopting the commercial model. The result is in line with the literature that shows the law's central place in finance \autocite{la2013law}. Specifically, holding all other variables constant, MFIs in civil law countries are 0.656 (\(e^{-0.421}\)) as likely as those in common law countries to follow the commercial model, meaning that most of them remain NGOs, following the not-for-profit, welfare approach. The odds of MFIs in civil law countries being commercial is 0.344 (\(1 - 0.656\)). On the contrary, MFIs in countries that follow other legal traditions are twice (\(e^{0.744}\)) as likely to be commercial instead of NGOs, with the odds being 1.1 (\(2.1 - 1.1\)).
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-37}Breakdown of Legal Status of MFIs by Legal Traditions, Percent}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+legal\_tradition & NGO & Bank & NBFI & Coop & Rural Bank\\
+\midrule
+Common & 47.34 & 74.47 & 44.2 & 6.38 & 99.275\\
+Civil & 43.91 & 4.04 & 22.2 & 67.91 & 0.725\\
+Other & 8.75 & 21.49 & 33.7 & 25.72 & -\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{1} Verticals total to 100}\\
+\end{tabular}
+\end{table}
+
+Table 4 show the breakdown of MFI legal forms by the country's legal tradition. The tables show the dominance of NGOs (32.3\%), commercial banks (24.6\%) and NBFIs (31\%) in common law countries. Cooperatives (52.4\%), NGOs (30.4\%), and NBFIs (15.8\%) dominate civil law countries, while NBFIs (42\%), cooperatives (34.8\%), and banks (12.6\%) are more common in other legal traditions. There are very few banks (1.4\%) and NBFIs (15.8\%) in civil law countries. Given the low levels of financial development in many civil law countries, there is a commercially viable gap for commercial MFIs to fill. The gap raises the odds of MFI transformation happening more frequently in civil law countries.
+
+On the contrary, the prevalence of commercial MFIs in common law countries could hold due to the higher levels of capital market development, reflecting the relative ease of acquiring funds \autocite{schnyder2018twenty}. The relative ease of acquiring capital from stock and bond markets could make it less likely that NGOs would prevail, making the commercial model more appropriate. The substantial number of NGOs in common law countries would fill the gap left by commercial MFIs due to the infeasibility of serving the clients, for instance, due to geographic remoteness or extreme poverty. There is little literature in law and finance that examines other legal traditions, such as Portuguese/ Spanish traditions as in Mozambique, Angola, Equatorial Guinea, and countries with unique traditions like Ethiopia that was never a colony. The results for the ``other'' legal practices in Africa's setting warrant further analysis. Table 7 confirms these results, showing, for instance, that 47.34\% of NGOs are in common law countries, 43.91 in civil law countries and the rest in other legal traditions. Common law countries have the bulk of banks (74.47\%) and NBFIs (44.2\%). Rural banks are almost entirely a common law phenomenon.
+
+\hypertarget{size-log-of-total-assets}{%
+\subsubsection{Size (Log of Total Assets)}\label{size-log-of-total-assets}}
+
+All else being constant, larger MFIs in terms of assets are more likely to adopt the commercial model than the relatively smaller MFIs with fewer assets. Perhaps large MFIs can sustain their operations independent of donations and subsidies \autocite{d2013unsubsidized}. They have a higher capacity to attract money from the capital markets, given their strong assets base and track record. Everything else remaining the same, a unit increase in the asset base of an MFI raises the probability of transformation by 1.27 (\(e^{0.240}\)), with the odds of being in the commercial model being 0.27 (\(1.27 - 1\)).
+
+Abundant literature in Africa and beyond, such as \textcite{gwatidzo2009corporate} and \textcite{kodongo2015capital}, show that the size of an MFI is an essential determinant of firms' capital structures, the mix of long term sources of funds. In this case, larger firms could easily avail collateral for funds and tend to be more open in providing information that financial intermediaries require to assess creditworthiness. On the other hand, small firms are information opaque \autocite{beck2014sme,kersten2017small}. Small firms, for example, may not afford to generate audited financial reports. Moreover, larger firms are likely to be mature with a solid business record which creates goodwill among the providers of funds \autocite{beck2008finance}. The size of MFIs could also reflect the extent of property rights protection that is harder to enforce in countries with weak governance \autocite{johnson2002property,claessens2003financial}. A fragile institutional environment makes it difficult for firms to grow due, in part, to poor access to capital and the high costs of formalising business \autocite{hansen2004reconsidering}. Next, we examine country-level governance / institutional quality.
+
+\hypertarget{country-level-governance-institutional-quality-kkm}{%
+\subsubsection{Country Level Governance/ Institutional Quality (KKM)}\label{country-level-governance-institutional-quality-kkm}}
+
+We capture governance or institutional quality by taking the first principal component of the KKM Worldwide Governance Indicators (WGI) indices \autocite{kraay2010worldwide}. Governance (KKM Index) positively relates to the odds of transforming. All else remaining the same, when the governance index in a country rises by one unit, MFIs in the given country are 1.1 (\(e^{0.095}\)) times more likely to be in the commercial model than NGOs, meaning that the odds rise by \(0.1\) (\(1.1 - 1\)). The results probably hold due to the importance of property rights in raising confidence among private investors who finance the operations of transformed MFIs (Allen et al., 2013, 2014). Where governance, and hence property rights are weak, then most MFIs would likely remain NGOs for longer as investors are reluctant to finance private ventures in line with \textcite{johnson2002property} and \textcite{claessens2003financial}.
+
+Literature shows a positive link between country-level institutional quality and the establishment, growth of private firms \autocite{sobel2008testing}. As captured in the KKM index, institutional quality captures factors that relate directly to the ease of doing business, contract enforcement effectiveness, and the extent of property rights. Where institutional quality is high, we expect private firms to take root, mainly commercial MFIs, primarily commercial banks and NBFIs. On the other hand, where institutional quality is low, NGOs and not-for-profit oriented MFIs may be more prevalent \autocite{kuzey2021link}. Indeed, The results on governance could partly explain the prevalence of NGOs in North Africa in the sample dataset, together with religion. Table 8 shows that North Africa fares poorly compared to Sub-Saharan Africa in most governance metrics. In contrast, Table 9 shows that commercial banks and NBFIs are more prevalent in countries with higher institutional quality.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-38}Summary Statistics on Governance in Africa}
+\centering
+\begin{tabular}[t]{lrrrr}
+\toprule
+Region & Min & Mean & Median & Max\\
+\midrule
+North Africa & -3.01 & -1.61 & -1.506 & -1.01\\
+Sub-Saharan Africa & -5.23 & 0.06 & -0.114 & 7.37\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabular}
+\end{table}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-39}Institutional Quality (KKM) and Legal Status of MFIs in Africa}
+\centering
+\begin{tabular}[t]{lrrrr}
+\toprule
+currentlegalstatus & Min & Mean & Median & Max\\
+\midrule
+NGO & -5.23 & -0.494 & -0.758 & 5.68\\
+Bank & -5.23 & 0.929 & 1.208 & 7.37\\
+NBFI & -5.17 & 0.510 & 0.350 & 6.74\\
+Coop & -3.36 & -0.166 & -0.270 & 4.92\\
+Rural Bank & -3.31 & -2.652 & -3.183 & 2.38\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabular}
+\end{table}
+
+\hypertarget{private-credit-to-gdp}{%
+\subsubsection{Private Credit to GDP}\label{private-credit-to-gdp}}
+
+The private credit to GDP inversely relates to the prevalence of commercial models of microfinance, with the relationship mostly insignificant. In this case, private credit refers to an aspect of capital markets development, mainly in the banking sector. It is puzzling that a well-developed credit market does not appear to enhance the prevalence of for-profit MFI models. The results could suggest a weak linkage between MFIs and capital markets, more so credit from financial intermediaries. Indeed, MFIs exist to serve markets where mainstream intermediaries neglect, meaning the low presence of mainstream banks means a higher prevalence of MFIs to fill the void \autocite{de2007economics}. Where significant, a unit increase in private credit to GDP corresponds to a 0.894 times lower chance that an MFI will be commercial, profit-oriented (\(e^{-0.112}\)), which corresponds to an odds of -0.114.
+
+As noted, MFIs, especially the NGO type, exist to fill a financing gap that results from the failure of credit markets to reach the financially excluded - the poor, rural dwellers and women savers and borrowers. If mainstream credit markets are functional, then there is no case for the existence of commercial MFIs, because mainstream banks would fill the gap adequately, leaving no business case for commercial MFIs to exist. However, as no credit market is fully efficient, then NGOs would exist to serve niche markets where financial sustainability is unattainable due to a combination of high costs and low revenues \autocite{de2007economics}. On the other hand, if capital markets are not well developed, there exists a market gap that commercial MFIs could exploit to make a profit \autocite{d2013unsubsidized,armendariz2013subsidy}.
+
+\hypertarget{stock-market-capitalisation-to-gdp}{%
+\subsubsection{Stock market capitalisation to GDP}\label{stock-market-capitalisation-to-gdp}}
+
+Stock market capitalisation to GDP has a significant negative relationship with the prevalence of commercial MFIs. Precisely, a unit increase of stock market capitalisation corresponds to a 0.721 odds of an MFI adopting the for-profit model. Like private credit to GDP, stock market capitalisation to GDP proxies the level of stock market development, an essential source of long time finance for corporations, presumably including MFIs. The equity could be from the public or private equity market, which the stock market would proxy reasonably well. In the case of MFIs in the sample dataset, the capital assets ratio- the ratio of equity capital to assets shows the importance of equity in financing microfinance. Notably, equity is of greater importance to NGOs than commercial MFIs (see Table 10 below), with NBFIs and commercial banks following in that order. If NGOs are the dominant participants in equity markets, then there are lower chances that a well-developed stock market corresponds to more commercial MFIs. The same argument follows that if stock markets are well developed, then private and public credit markets are also well-developed \autocite{schnyder2018twenty}. With well-developed capital markets, financial exclusion incidences are fewer, leaving no vacuum that commercial MFIs could profitably exploit. In such instances, NGOs following the not-for-profit welfare model best serve the few financial exclusion instances.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-40}Capital Asset Ratio by MFI Legal Status in Africa}
+\centering
+\begin{tabular}[t]{lrr}
+\toprule
+Legal Status & Mean & Median\\
+\midrule
+Bank & 0.306 & 0.239\\
+Credit Union/ Cooperative & 0.196 & 0.208\\
+NBFI & 0.388 & 0.324\\
+NGO & 0.418 & 0.381\\
+Rural Bank & 0.176 & 0.137\\
+\bottomrule
+\multicolumn{3}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{3}{l}{\rule{0pt}{1em}Authors' construction from MIX data}\\
+\end{tabular}
+\end{table}
+
+\hypertarget{gdp-annual-growth-rate}{%
+\subsubsection{GDP Annual Growth Rate}\label{gdp-annual-growth-rate}}
+
+The GDP growth rate is not a significant driver of transformation. Where significant, some of the coefficients are positive, while others are negative. The implication is that the macro-environment may not be a substantial driver of MFIs decisions. Most MFIs in developing countries serve the informal sector's financially excluded population with low linkage to the formal economy \autocite{ghosh2013microfinance}.
+
+\hypertarget{regional-divide}{%
+\subsubsection{Regional Divide}\label{regional-divide}}
+
+It is notable that for the sample data, all the MFIs operating in North Africa are NGOs, while the rest of Africa has a MIX of all forms of MFIs \footnote{Countries in North Africa in the sample data are Morocco and Tunisia}. Religion may be at play in this case, where interest-based for-profit lending is incompatible with the Muslim faith that dominates North Africa \autocite{hassan2018religious}. Also, as noted, North Africa fares worse in governance (KKM) than sub-Saharan Africa, leading to a flawed property rights regime that discourages private investment \autocite{johnson2002property,claessens2003financial}.
+
+\hypertarget{time-effects}{%
+\subsubsection{Time Effects}\label{time-effects}}
+
+There is a strong trend towards commercialisation, with the commercial model increasingly dominating Africa's MFI landscape. All the year dummies are significant in all the models, the lowest level of significance being 10\%. Numerous researchers have noted the trend towards the commercial model. Hence, the abundant research seeks to examine the potential effects of the transformation on financial inclusion targets- the financially excluded \autocite{d2017ngos}. Some scholars claim that the trend may harm financial inclusion. \autocite{meagher2006microfinance,hartarska2007regulated}. Others hold the opposing view \autocite{duvendack2015mis}. It appears that the financial sustainability school that seeks commercialisation has the upper hand in Africa, at least in the last two decades.
+
+\newpage
+
+\begin{landscape}
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Logit and Probit Models [Coefficients]} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccccccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{8}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-9} 
+\\[-1.8ex] & \multicolumn{8}{c}{dummy} \\ 
+\\[-1.8ex] & \textit{logistic} & \textit{probit} & \textit{logistic} & \textit{probit} & \textit{logistic} & \textit{probit} & \textit{logistic} & \textit{probit} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$0.747$^{***}$ & $-$0.421$^{***}$ & $-$0.418$^{***}$ & $-$0.240$^{***}$ & $-$0.452$^{***}$ & $-$0.264$^{***}$ & $-$0.766$^{***}$ & $-$0.431$^{***}$ \\ 
+  & (0.114) & (0.065) & (0.132) & (0.076) & (0.157) & (0.091) & (0.112) & (0.064) \\ 
+  & & & & & & & & \\ 
+ ageMature & $-$1.200$^{***}$ & $-$0.691$^{***}$ & $-$0.898$^{***}$ & $-$0.522$^{***}$ & $-$0.944$^{***}$ & $-$0.551$^{***}$ & $-$1.150$^{***}$ & $-$0.662$^{***}$ \\ 
+  & (0.106) & (0.060) & (0.122) & (0.071) & (0.145) & (0.084) & (0.104) & (0.059) \\ 
+  & & & & & & & & \\ 
+ legal\_traditionCivil & $-$0.421$^{***}$ & $-$0.239$^{***}$ & $-$0.515$^{***}$ & $-$0.313$^{***}$ & $-$0.545$^{***}$ & $-$0.338$^{***}$ & $-$0.518$^{***}$ & $-$0.289$^{***}$ \\ 
+  & (0.117) & (0.068) & (0.127) & (0.074) & (0.140) & (0.082) & (0.114) & (0.066) \\ 
+  & & & & & & & & \\ 
+ legal\_traditionOther & 0.744$^{***}$ & 0.387$^{***}$ & 0.790$^{***}$ & 0.416$^{***}$ & 0.870$^{***}$ & 0.466$^{***}$ & 0.743$^{***}$ & 0.387$^{***}$ \\ 
+  & (0.132) & (0.073) & (0.149) & (0.084) & (0.167) & (0.094) & (0.130) & (0.072) \\ 
+  & & & & & & & & \\ 
+ assets & 0.240$^{***}$ & 0.142$^{***}$ & 0.355$^{***}$ & 0.214$^{***}$ & 0.450$^{***}$ & 0.270$^{***}$ & 0.242$^{***}$ & 0.144$^{***}$ \\ 
+  & (0.019) & (0.011) & (0.024) & (0.014) & (0.029) & (0.016) & (0.018) & (0.011) \\ 
+  & & & & & & & & \\ 
+ kkm & 0.095$^{***}$ & 0.057$^{***}$ & 0.102$^{***}$ & 0.063$^{***}$ & 0.139$^{***}$ & 0.087$^{***}$ & 0.115$^{***}$ & 0.067$^{***}$ \\ 
+  & (0.019) & (0.011) & (0.023) & (0.013) & (0.025) & (0.015) & (0.019) & (0.011) \\ 
+  & & & & & & & & \\ 
+ pcrdbgdp & $-$0.112 & $-$0.049 & $-$0.127 & $-$0.047 & $-$0.221$^{**}$ & $-$0.097$^{*}$ & 0.055 & 0.036 \\ 
+  & (0.076) & (0.042) & (0.083) & (0.047) & (0.090) & (0.051) & (0.070) & (0.039) \\ 
+  & & & & & & & & \\ 
+ stmktcap & $-$0.327$^{***}$ & $-$0.190$^{***}$ & $-$0.369$^{***}$ & $-$0.225$^{***}$ & $-$0.398$^{***}$ & $-$0.246$^{***}$ & $-$0.359$^{***}$ & $-$0.206$^{***}$ \\ 
+  & (0.038) & (0.022) & (0.042) & (0.024) & (0.047) & (0.027) & (0.037) & (0.021) \\ 
+  & & & & & & & & \\ 
+ gdp\_growth\_annual & 0.016 & 0.012$^{*}$ & $-$0.004 & $-$0.0004 & $-$0.025$^{*}$ & $-$0.013 & 0.024$^{**}$ & 0.015$^{**}$ \\ 
+  & (0.011) & (0.006) & (0.013) & (0.008) & (0.014) & (0.008) & (0.011) & (0.006) \\ 
+  & & & & & & & & \\ 
+ Constant & $-$2.030$^{***}$ & $-$1.260$^{***}$ & $-$3.600$^{***}$ & $-$2.240$^{***}$ & $-$4.510$^{***}$ & $-$2.770$^{***}$ & $-$1.480$^{***}$ & $-$0.929$^{***}$ \\ 
+  & (0.446) & (0.266) & (0.507) & (0.301) & (0.569) & (0.336) & (0.277) & (0.162) \\ 
+  & & & & & & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & Yes & Yes & Yes & Yes & No & No \\ 
+Deviance & 677*** & 664*** & 651*** & 648*** & 660*** & 659*** & 619*** & 607*** \\ 
+df & 29 & 29 & 29 & 29 & 29 & 29 & 9 & 9 \\ 
+Data & Full & Full & >3yrs & >3yrs & >5yrs & >5yrs & Full & Full \\ 
+Observations & 4,782 & 4,782 & 3,840 & 3,840 & 3,165 & 3,165 & 4,782 & 4,782 \\ 
+Log Likelihood & $-$2,439.000 & $-$2,446.000 & $-$2,004.000 & $-$2,005.000 & $-$1,633.000 & $-$1,633.000 & $-$2,469.000 & $-$2,475.000 \\ 
+Akaike Inf. Crit. & 4,939.000 & 4,952.000 & 4,068.000 & 4,071.000 & 3,325.000 & 3,326.000 & 4,957.000 & 4,969.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{8}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\end{landscape}
+
+\newpage
+
+\hypertarget{multinomial-logit-model}{%
+\subsection{Multinomial Logit Model}\label{multinomial-logit-model}}
+
+We extend the analysis to the multinomial logit model. The results are presented in the tables in Appendix 2 to Appendix 5. As in the binary models, the results confirm the factors that drive the conversion of MFIs from NGOs to commercial models. We examine for each variable the interpretation from the model basing our discussion on the results in Appendix 2, which easily generalises to the other Tables in the series. The results show that as the MFI transitions from being new to young, it is less likely to be a bank, NBFI, credit union, or rural bank due to the coefficients' negative sign. Hence, older firms are more likely NGOs in line with the logit model for reasons expounded in the logit model's output.
+
+Similarly, compared to NGOs, mature MFIs are less likely to be commercial banks, NBFIs, cooperatives or rural banks. The results are in line with the logit model showing that most commercial MFIs are more likely new or young, while NGOs are more likely mature. Again, start-up MFIs are more inclined to the commercial model than the established firms.
+
+Relative to common law countries, MFIs in civil law countries less likely to be commercial banks, NBFIs, and rural banks and are more likely to be NGOs. However, in civil law countries, MFIs are more likely to be cooperatives than NGOs. Likewise, relative to common law countries, MFIs in other legal traditions are less likely to be commercial banks and rural banks and more likely to be credit unions or NBFIs. The results illustrate the link between legal tradition and the legal status of MFIs, with NGOs dominating common law countries whilst cooperatives prevail in other legal traditions, including civil law tradition. As noted, the better-developed capital markets in common law countries leave little room for commercial MFIs to thrive. On the contrary, the under-served populace in civil law countries presents ample business opportunities for profit-oriented MFIs \autocite{d2013unsubsidized,mia2017mission}.
+
+The results show that as an MFI size increases, the likelihood of shifting from the NGO model to the commercial model rises. However, as firms grow in size, they are less likely to adopt the cooperative model, although the relationship is not significant. MFIs mainly shift from NGOs to commercial banks and NBFIs, but rarely to cooperatives or rural banks. The results highlight the uniqueness of cooperatives and rural banking as microfinance models that serve niche markets. Strictly speaking, cooperatives are quasi-commercial entities. Their mode of operation differs from the other MFIs in terms of clientele and possible geographic reach, hence reducing size. Similarly, rural banks serve marginalised rural dwellers and are more prevalent in common law countries. Noting that most large MFIs are also mature, it follows that the edge granted by maturity also accrues to larger MFIs \autocite{beck2014sme,kersten2017small}.
+
+Also, as country-level institutional quality rises, MFIs are more likely to be commercial banks and NBFIs, and less likely cooperatives and rural banks relative to NGOs. Cooperatives and rural banks are less sensitive to institutional quality matters courtesy of their unique markets, even more so than NGOs \autocite{sobel2008testing}. As noted, the commercial, for-profit model could only thrive best in countries where institutional quality is high. However, cooperatives and rural bank in Africa serve unique markets, with rural banks primarily focused on informal rural economies that may have a weak linkage to the formal economy, making governance and institutional quality less relevant.
+
+Capital market development- both stock market to GDP and private credit to GDP follow a similar pattern. As in the logit model, MFIs located in countries scoring high in private credit to GDP and stock market capitalisation to GDP are less likely to go commercial and more likely to be NGOs. We have argued before that well developed financial market implies a smaller customer base for MFIs and hence the result. The result also concurs with the observation of legal tradition. Because capital markets in civil law countries are less developed, the void tends to be profitably filled by commercial MFIs.In common law countries, capital markets leave few profitable opportunities which NGOs serve \autocite{d2013unsubsidized,armendariz2013subsidy}.
+
+Finally, high GDP growth rates increase the likelihood that an MFI will be a commercial bank, NBFI, or rural bank but less likely to be a cooperative or rural bank. As is the case with institutional quality, the economic environment matters most for commercial MFIs that target profit. However, NGOs, cooperatives and rural bank may better serve communities undergoing adverse economic experiences \autocite{ghosh2013microfinance}. Cooperatives obtain capital from members and are obligated to attend to the members regardless of the economic uncertainties. NGOs and rural banks specifically target marginalised people. Economic downturns are more likely to raise the level of exclusion and make these forms of MFIs even more relevant \autocite{schnyder2018twenty}.
+
+\newpage
+
+\hypertarget{overall-model-fit}{%
+\subsection{Overall Model Fit}\label{overall-model-fit}}
+
+To assess the overall model fit, we generate the \texttt{confusion\ matrix}. For this purpose, we use the models developed by using the whole dataset- Table 11 for the logit model and Appendix 2 for the multinomial logit model.
+
+\hypertarget{logit-model}{%
+\subsubsection{Logit Model}\label{logit-model}}
+
+Overall, the models are highly significant (at 1\% significance levels, see Table 11), meaning that they explain why MFIs tend to adopt to given model better than guessing the most prevalent outcome- every MFI in the sample is not an NGO. In the first row of Table 12, we see that the logit model predicted correctly that 304 NGOs were NGOs. The model also accurately predicts that an MFI belongs to other legal forms (Bank, NBFI, Coop, Rural Bank) when they belong to these forms. However, the model fails by predicting 976 cases of MFIs as other legal forms when they are NGOs. Similarly, the model wrongly classifies 126 cases of MFIs of other legal forms as NGOs.
+
+Overall, the logit model accurately predicts the legal status of an MFI 77\% of the time \footnote{The accuracy is computed as (304 + 3376) / (304 + 976 + 126 + 3376) = 0.77}. The prediction is within the confidence interval captured by the entries \texttt{AccuracyLower} and \texttt{AccuracyUpper}. If we were to guess that every MFI in the dataset follows the commercial model (that is, not an NGO), we would be accurate 73.2\% of the time (referred to as the No Information Rate (NIR) in the \texttt{confusion\ matrix}) \autocite{cavalin2018confusion}. The p-value shows that the accuracy is not due to chance with over 99\% confidence, meaning that the accuracy is significantly greater than the NIR \autocite{kleinbaum2002logistic}.
+
+The model has low \texttt{sensitivity}, though, at 23.75\%. In this case, sensitivity is a model's ability to accurately predict that an MFI is an NGO when it is an NGO \autocite{marom2010using}. The low \texttt{sensitivity} could, in part, be due to the low \texttt{prevalence} of NGOs in the dataset (at 26.77\%) relative to the commercial forms of MFIs (73.23\%). However, the model has very high \texttt{specificity} at 96.4\%. Specificity is the capacity of the model to predict that an MFI follows the commercial model (NOT an NGO) when it following the commercial model (is NOT an NGO) \autocite{zeng2020confusion}. Hence, it appears that commercial MFIs have distinct characters that easily allow the model to distinguish them from NGOs. The other metric of interest is the \texttt{balanced\ accuracy} that averages \texttt{sensitivity} and \texttt{specificity} at 60\% \autocite{gorzalczany2016multi}. Overall, the model does better than guessing that every MFI in the sample dataset follows the commercial model (or is NOT an NGO) \autocite{hosmer2013applied}.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-44}Confusion Matrix and Statistics for the Logit Model}
+\centering
+\begin{tabular}[t]{ll}
+\toprule
+Description & Value\\
+\midrule
+Pred\_NGO\_Ref\_NGO & 304.000\\
+Pred\_others\_Ref\_NGO & 976.000\\
+Pred\_NGO\_Ref\_others & 126.000\\
+Pred\_others\_Ref\_others & 3376.000\\
+Accuracy & 0.770\\
+\addlinespace
+Kappa & 0.255\\
+AccuracyLower & 0.757\\
+AccuracyUpper & 0.781\\
+NoInformationRate & 0.732\\
+AccuracyPValue & 0.000\\
+\addlinespace
+McnemarPValue & 0.000\\
+Sensitivity & 0.237\\
+Specificity & 0.964\\
+Pos.Pred.Value & 0.707\\
+Neg.Pred.Value & 0.776\\
+\addlinespace
+Precision & 0.707\\
+Recall & 0.237\\
+F1 & 0.356\\
+Prevalence & 0.268\\
+Detection.Rate & 0.064\\
+\addlinespace
+Detection.Prevalence & 0.090\\
+Balanced.Accuracy & 0.601\\
+\bottomrule
+\multicolumn{2}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}Authors' construction}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}\textit{Notes: }}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}\textsuperscript{1} Accuracy > NoInformationRate is significant at 1\% confidence level, p = 0.0000}\\
+\end{tabular}
+\end{table}
+
+\hypertarget{multinomial-logit-model-1}{%
+\subsubsection{Multinomial Logit Model}\label{multinomial-logit-model-1}}
+
+As noted, I develop the \texttt{confusion\ matrix} using the \texttt{multinomial\ logit} with the full data (Table 13). The matrix shows that the overall \texttt{accuracy} is 56.5\%. Note that the overall accuracy is one value for the entire model, the \texttt{No\ Information\ Rate\ (NIR)}. Overall \texttt{accuracy}, in this case, is the ability to accurately predict that an MFI is an NGO when it is an NGO, a commercial bank when it is a commercial bank, and so on. If we were to guess that every MFI in the model is the cooperative - the most prevalent legal form- we would be right 39.3\% of the time, the NIR. The p-value shows that the overall \texttt{accuracy} metric is significantly different from the \texttt{NIR}. Although the multinomial logit model has a markedly lower accuracy than the logit model, it has a far more demanding task of distinguishing 5 legal forms of MFIs instead of 2 for the logit model \autocite{kwak2002multinomial}.
+
+The model's \texttt{sensitivity} varies from a low of 47.1\% for NBFI to a high of 61.8\% for NGOs. The \texttt{specificity} is relatively high, ranging from 80.1\% for NBFIs to 99.22\% for rural banks \autocite{ginting2019hate}. NGOs have a \texttt{specificity} of 81.4\%, meaning that the model can predict that an MFI is not an NGO when it is not an NGO 81.4\% of the time. For rural banks, the model can correctly predict over 99\% of the time that an MFI is not a rural bank when it is not a rural bank. The \texttt{balanced\ accuracy} is also reasonably high, with the lowest being NBFIs at 63.9\% and the highest at 79.26\% for rural banks \autocite{hedeker2003mixed}.
+
+\newpage
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-45}Confusion Matrix and Statistics for the Multinomial Logit Model}
+\centering
+\begin{tabular}[t]{lrrrrr}
+\toprule
+  & NGO & Bank & NBFI & Coop & Rural Bank\\
+\midrule
+Accuracy & 0.565 & 0.565 & 0.565 & 0.565 & 0.565\\
+NoInformationRate & 0.393 & 0.393 & 0.393 & 0.393 & 0.393\\
+Kappa & 0.414 & 0.414 & 0.414 & 0.414 & 0.414\\
+sensitivity & 0.618 & 0.615 & 0.478 & 0.584 & 0.593\\
+specificity & 0.814 & 0.930 & 0.801 & 0.886 & 0.992\\
+\addlinespace
+PosPredValue & 0.437 & 0.517 & 0.474 & 0.768 & 0.739\\
+NegPredValue & 0.901 & 0.952 & 0.803 & 0.767 & 0.985\\
+Prevalence & 0.189 & 0.109 & 0.274 & 0.393 & 0.036\\
+DetectionRate & 0.117 & 0.067 & 0.131 & 0.229 & 0.021\\
+DetectionPrevalence & 0.268 & 0.129 & 0.276 & 0.298 & 0.029\\
+\addlinespace
+BalancedAccuracy & 0.716 & 0.773 & 0.639 & 0.735 & 0.793\\
+\bottomrule
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}Authors' construction}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textit{Notes: }}\\
+\multicolumn{6}{l}{\rule{0pt}{1em}\textsuperscript{1} Accuracy > NoInformationRate is significant at 1\% confidence level, p = 0.0000}\\
+\end{tabular}
+\end{table}
+
+\newpage
+
+\hypertarget{regression-diagnostics}{%
+\subsection{Regression Diagnostics}\label{regression-diagnostics}}
+
+This section examines three issues that arise in logit models; extreme values, multicollinearity, and linearity, respectively.
+
+\hypertarget{extreme-values}{%
+\subsubsection{Extreme values}\label{extreme-values}}
+
+Figure 4 below shows that the data indeed has influential values. For robustness, we winsorise the data, removing the top 10\% and the bottom 10\%. Still, the results remain robust, as regression results in Table 14 shows. It is notable that apart from the change in coefficients' value, the signs remain the same, meaning that influential observations are not a significant issue.
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Logit and Probit Models for Winsorized Data} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & \multicolumn{4}{c}{dummy} \\ 
+\\[-1.8ex] & \textit{logistic} & \textit{probit} & \textit{logistic} & \textit{probit} \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$0.885$^{***}$ & $-$0.514$^{***}$ & $-$0.888$^{***}$ & $-$0.515$^{***}$ \\ 
+  & (0.119) & (0.068) & (0.117) & (0.067) \\ 
+  & & & & \\ 
+ ageMature & $-$1.320$^{***}$ & $-$0.772$^{***}$ & $-$1.250$^{***}$ & $-$0.728$^{***}$ \\ 
+  & (0.112) & (0.063) & (0.109) & (0.062) \\ 
+  & & & & \\ 
+ legal\_traditionCivil & $-$0.215$^{*}$ & $-$0.110 & $-$0.369$^{***}$ & $-$0.192$^{***}$ \\ 
+  & (0.130) & (0.076) & (0.124) & (0.072) \\ 
+  & & & & \\ 
+ legal\_traditionOther & 0.916$^{***}$ & 0.502$^{***}$ & 0.894$^{***}$ & 0.486$^{***}$ \\ 
+  & (0.145) & (0.080) & (0.142) & (0.079) \\ 
+  & & & & \\ 
+ assets & 0.269$^{***}$ & 0.159$^{***}$ & 0.270$^{***}$ & 0.162$^{***}$ \\ 
+  & (0.021) & (0.012) & (0.020) & (0.012) \\ 
+  & & & & \\ 
+ kkm & 0.084$^{***}$ & 0.052$^{***}$ & 0.115$^{***}$ & 0.069$^{***}$ \\ 
+  & (0.021) & (0.012) & (0.021) & (0.012) \\ 
+  & & & & \\ 
+ pcrdbgdp & $-$0.335$^{***}$ & $-$0.190$^{***}$ & $-$0.083 & $-$0.052 \\ 
+  & (0.098) & (0.056) & (0.086) & (0.050) \\ 
+  & & & & \\ 
+ stmktcap & $-$0.269$^{***}$ & $-$0.153$^{***}$ & $-$0.328$^{***}$ & $-$0.184$^{***}$ \\ 
+  & (0.044) & (0.025) & (0.041) & (0.024) \\ 
+  & & & & \\ 
+ gdp\_growth\_annual & 0.028 & 0.019$^{*}$ & 0.040$^{**}$ & 0.025$^{**}$ \\ 
+  & (0.018) & (0.010) & (0.017) & (0.010) \\ 
+  & & & & \\ 
+ Constant & $-$2.100$^{***}$ & $-$1.290$^{***}$ & $-$1.660$^{***}$ & $-$1.030$^{***}$ \\ 
+  & (0.485) & (0.289) & (0.326) & (0.191) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & No & No \\ 
+Deviance & 664*** & 657*** & 602*** & 595*** \\ 
+df & 29 & 29 & 9 & 9 \\ 
+Data & Winsorized & Winsorized & Winsorized & Winsorized \\ 
+Observations & 4,450 & 4,450 & 4,450 & 4,450 \\ 
+Log Likelihood & $-$2,269.000 & $-$2,273.000 & $-$2,300.000 & $-$2,304.000 \\ 
+Akaike Inf. Crit. & 4,598.000 & 4,605.000 & 4,620.000 & 4,627.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\begin{landscape}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/unnamed-chunk-49-1.pdf}
+\caption{\label{fig:unnamed-chunk-49}Visualisation of Outliers}
+\end{figure}
+
+\end{landscape}
+
+\hypertarget{multicollinearity}{%
+\subsubsection{Multicollinearity}\label{multicollinearity}}
+
+The problem of multicollinearity among independent variables leads to unstable coefficients. In the model, however, multicollinearity is not a significant issue as in all cases, the variance inflation factors(VIFs) are below the 5 (sometimes 10) threshold that several researchers recommend \autocite{gujarati2012econometrics}. Table 15 shows the VIFs for each variable.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-50}Variance Inflation Factors for Logit Model}
+\centering
+\begin{tabu} to \linewidth {>{\raggedright}X>{\raggedleft}X>{\raggedleft}X>{\raggedleft}X}
+\toprule
+  & GVIF & Df & GVIF\textasciicircum{}(1/(2*Df))\\
+\midrule
+age & 1.41 & 2 & 1.09\\
+legal\_tradition & 2.57 & 2 & 1.27\\
+assets & 1.49 & 1 & 1.22\\
+kkm & 1.16 & 1 & 1.08\\
+pcrdbgdp & 2.01 & 1 & 1.42\\
+\addlinespace
+stmktcap & 2.72 & 1 & 1.65\\
+gdp\_growth\_annual & 1.15 & 1 & 1.07\\
+factor(year) & 1.59 & 20 & 1.01\\
+\bottomrule
+\multicolumn{4}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{4}{l}{\rule{0pt}{1em}Authors' construction}\\
+\end{tabu}
+\end{table}
+
+\hypertarget{linearity-assumptions}{%
+\subsubsection{Linearity assumptions}\label{linearity-assumptions}}
+
+Here, we check the linear relationship between independent numeric variables and the logit of the outcome by visually inspecting the scatter plot between each predictor and the logit values. As Figure 5 below shows, most of the variables could reasonably fit a linear model, though not perfectly \autocite{cheng2007testing}. The fitted line uses the Locally Weighted Scatterplot Smoothing (LOESS) method hence the perceived non-linearity.
+
+\begin{landscape}
+
+\begin{figure}
+\centering
+\includegraphics{_main_files/figure-latex/unnamed-chunk-51-1.pdf}
+\caption{\label{fig:unnamed-chunk-51}Linearity of Independent Variables}
+\end{figure}
+
+\end{landscape}
+
+\hypertarget{other-robustness-checks}{%
+\subsection{Other Robustness Checks}\label{other-robustness-checks}}
+
+In many cases, it is unlikely that a credit union starts as an NGO, given that they mostly serve clients with similar professional base and geographic background. For this reason, we run a regression, excluding cooperatives with the results displayed in Appendix 1. The results remain robust in this case, noting that signs of the coefficients do not change.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+This article examined the factors that drive the transformation of MFIs from the NGO not-for-profit model to the commercial, for-profit model focusing on Africa. The analysis shows that at the MFI level, there are two critical factors; age, legal tradition, and size matter. At the aggregate level, it is the country institutional quality and stock market capitalisation that matter. Specifically, older firms are most likely to follow the not-for-profit model, while newer firms are most likely commercial. We expect that older firms are better at attracting donations and subsidies and hence still follow the earlier tradition of microfinance as a welfare tool to aid the financially excluded \autocite{d2017ngos}. For legal tradition, MFIs located in civil law countries are least likely to follow the commercial model relative to those in common law countries. The results align with the finance and law literature, where civil law countries have weaker capital markets. Hence, MFIs have a market void to fill profitably, unlike in common law countries where mainstream markets already fill much of the gap leaving relatively fewer profit opportunities \autocite{la2013law,schnyder2018twenty}.MFIs in countries following other legal traditions other than common law and civil law are most likely to follow the commercial model.
+
+Turning to size, larger firms tend to adopt the commercial model compared to relatively younger firms. We expect that larger firms are better at attracting commercial capital courtesy of the goodwill and the collateral to pledge. Institutional quality relates positively to adopting the commercial model at the country level, while stock market capitalisation has the opposite effect. Institutional quality has this effect due to the ease of contracting, contract enforcement, and property rights \autocite{claessens2003financial}. Private credit to GDP and GDP growth rates are not significant drivers of the conversion of MFIs. However, the coefficients' signs indicate that private credit to GDP, like the stock market to GDP ratio, is inversely related to the probability of transformation. At the same time, GDP growth shows mixed effects.
+
+\hypertarget{appendices}{%
+\section{Appendices}\label{appendices}}
+
+\hypertarget{appendix-1-logit-and-probit-models-excluding-cooperatives}{%
+\subsection{Appendix 1: Logit and Probit Models Excluding Cooperatives}\label{appendix-1-logit-and-probit-models-excluding-cooperatives}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Logit and Probit Models with Data Excluding Cooperatives} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{dummy} \\ 
+\\[-1.8ex] & \textit{logistic} & \textit{probit} \\ 
+\\[-1.8ex] & (1) & (2)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$0.747$^{***}$ & $-$0.421$^{***}$ \\ 
+  & (0.114) & (0.065) \\ 
+  & & \\ 
+ ageMature & $-$1.200$^{***}$ & $-$0.691$^{***}$ \\ 
+  & (0.106) & (0.060) \\ 
+  & & \\ 
+ legal\_traditionCivil & $-$0.421$^{***}$ & $-$0.239$^{***}$ \\ 
+  & (0.117) & (0.068) \\ 
+  & & \\ 
+ legal\_traditionOther & 0.744$^{***}$ & 0.387$^{***}$ \\ 
+  & (0.132) & (0.073) \\ 
+  & & \\ 
+ assets & 0.240$^{***}$ & 0.142$^{***}$ \\ 
+  & (0.019) & (0.011) \\ 
+  & & \\ 
+ kkm & 0.095$^{***}$ & 0.057$^{***}$ \\ 
+  & (0.019) & (0.011) \\ 
+  & & \\ 
+ pcrdbgdp & $-$0.112 & $-$0.049 \\ 
+  & (0.076) & (0.042) \\ 
+  & & \\ 
+ stmktcap & $-$0.327$^{***}$ & $-$0.190$^{***}$ \\ 
+  & (0.038) & (0.022) \\ 
+  & & \\ 
+ gdp\_growth\_annual & 0.016 & 0.012$^{*}$ \\ 
+  & (0.011) & (0.006) \\ 
+  & & \\ 
+ Constant & $-$2.030$^{***}$ & $-$1.260$^{***}$ \\ 
+  & (0.446) & (0.266) \\ 
+  & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes \\ 
+Deviance & 664*** & 657*** \\ 
+df & 29 & 29 \\ 
+Data & No Credit Unions & No Credit Unions \\ 
+Observations & 4,782 & 4,782 \\ 
+Log Likelihood & $-$2,439.000 & $-$2,446.000 \\ 
+Akaike Inf. Crit. & 4,939.000 & 4,952.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{appendix-2-multinomial-logit-model-with-full-dataset}{%
+\subsection{Appendix 2: Multinomial Logit Model With Full Dataset}\label{appendix-2-multinomial-logit-model-with-full-dataset}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model- Full Data} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & Bank & NBFI & Coop & Rural Bank \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$1.640$^{***}$ & $-$0.621$^{***}$ & $-$0.543$^{***}$ & $-$0.973$^{***}$ \\ 
+  & (0.184) & (0.133) & (0.139) & (0.374) \\ 
+  & & & & \\ 
+ ageMature & $-$2.650$^{***}$ & $-$1.460$^{***}$ & $-$0.630$^{***}$ & $-$0.840$^{***}$ \\ 
+  & (0.174) & (0.128) & (0.128) & (0.294) \\ 
+  & & & & \\ 
+ legal\_traditionCivil & $-$3.750$^{***}$ & $-$1.190$^{***}$ & 1.890$^{***}$ & $-$5.130$^{***}$ \\ 
+  & (0.266) & (0.143) & (0.167) & (1.070) \\ 
+  & & & & \\ 
+ legal\_traditionOther & $-$0.377$^{*}$ & 0.715$^{***}$ & 2.400$^{***}$ & $-$5.880$^{***}$ \\ 
+  & (0.199) & (0.149) & (0.177) & (1.750) \\ 
+  & & & & \\ 
+ assets & 0.798$^{***}$ & 0.360$^{***}$ & $-$0.007 & 0.420$^{***}$ \\ 
+  & (0.038) & (0.026) & (0.024) & (0.070) \\ 
+  & & & & \\ 
+ kkm & 0.450$^{***}$ & 0.250$^{***}$ & $-$0.066$^{**}$ & $-$1.480$^{***}$ \\ 
+  & (0.034) & (0.024) & (0.026) & (0.185) \\ 
+  & & & & \\ 
+ pcrdbgdp & $-$0.008 & $-$0.048 & $-$0.250$^{***}$ & $-$2.640$^{***}$ \\ 
+  & (0.109) & (0.085) & (0.091) & (0.624) \\ 
+  & & & & \\ 
+ stmktcap & $-$0.266$^{***}$ & $-$0.217$^{***}$ & $-$0.364$^{***}$ & $-$1.300$^{***}$ \\ 
+  & (0.061) & (0.045) & (0.049) & (0.314) \\ 
+  & & & & \\ 
+ gdp\_growth\_annual & 0.043$^{**}$ & 0.054$^{***}$ & $-$0.005 & 0.019 \\ 
+  & (0.018) & (0.014) & (0.013) & (0.079) \\ 
+  & & & & \\ 
+ Constant & $-$11.400$^{***}$ & $-$4.580$^{***}$ & $-$1.250$^{**}$ & $-$3.840 \\ 
+  & (0.973) & (0.577) & (0.594) & (3.310) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & Yes & Yes \\ 
+Data & Full & Full & Full & Full \\ 
+Akaike Inf. Crit. & 10,124.000 & 10,124.000 & 10,124.000 & 10,124.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{appendix-3-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives}{%
+\subsection{Appendix 3: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives}\label{appendix-3-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model- Full Data Without Cooperatives} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & Bank & NBFI & Coop & Rural Bank \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$1.640$^{***}$ & $-$0.621$^{***}$ & $-$0.543$^{***}$ & $-$0.973$^{***}$ \\ 
+  & (0.184) & (0.133) & (0.139) & (0.374) \\ 
+  & & & & \\ 
+ ageMature & $-$2.650$^{***}$ & $-$1.460$^{***}$ & $-$0.630$^{***}$ & $-$0.840$^{***}$ \\ 
+  & (0.174) & (0.128) & (0.128) & (0.294) \\ 
+  & & & & \\ 
+ legal\_traditionCivil & $-$3.750$^{***}$ & $-$1.190$^{***}$ & 1.890$^{***}$ & $-$5.130$^{***}$ \\ 
+  & (0.266) & (0.143) & (0.167) & (1.070) \\ 
+  & & & & \\ 
+ legal\_traditionOther & $-$0.377$^{*}$ & 0.715$^{***}$ & 2.400$^{***}$ & $-$5.880$^{***}$ \\ 
+  & (0.199) & (0.149) & (0.177) & (1.750) \\ 
+  & & & & \\ 
+ assets & 0.798$^{***}$ & 0.360$^{***}$ & $-$0.007 & 0.420$^{***}$ \\ 
+  & (0.038) & (0.026) & (0.024) & (0.070) \\ 
+  & & & & \\ 
+ kkm & 0.450$^{***}$ & 0.250$^{***}$ & $-$0.066$^{**}$ & $-$1.480$^{***}$ \\ 
+  & (0.034) & (0.024) & (0.026) & (0.185) \\ 
+  & & & & \\ 
+ pcrdbgdp & $-$0.008 & $-$0.048 & $-$0.250$^{***}$ & $-$2.640$^{***}$ \\ 
+  & (0.109) & (0.085) & (0.091) & (0.624) \\ 
+  & & & & \\ 
+ stmktcap & $-$0.266$^{***}$ & $-$0.217$^{***}$ & $-$0.364$^{***}$ & $-$1.300$^{***}$ \\ 
+  & (0.061) & (0.045) & (0.049) & (0.314) \\ 
+  & & & & \\ 
+ gdp\_growth\_annual & 0.043$^{**}$ & 0.054$^{***}$ & $-$0.005 & 0.019 \\ 
+  & (0.018) & (0.014) & (0.013) & (0.079) \\ 
+  & & & & \\ 
+ Constant & $-$11.400$^{***}$ & $-$4.580$^{***}$ & $-$1.250$^{**}$ & $-$3.840 \\ 
+  & (0.973) & (0.577) & (0.594) & (3.310) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & Yes & Yes & Yes \\ 
+Data & Full & Full & Full & Full \\ 
+Akaike Inf. Crit. & 10,124.000 & 10,124.000 & 10,124.000 & 10,124.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{appendix-4-multinomial-logit-model-with-full-dataset-but-no-year-effects}{%
+\subsection{Appendix 4: Multinomial Logit Model With Full Dataset But No Year Effects}\label{appendix-4-multinomial-logit-model-with-full-dataset-but-no-year-effects}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model- Full Data Without Year Effects} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & Bank & NBFI & Coop & Rural Bank \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$1.740$^{***}$ & $-$0.619$^{***}$ & $-$0.543$^{***}$ & $-$1.120$^{***}$ \\ 
+  & (0.181) & (0.132) & (0.136) & (0.359) \\ 
+  & & & & \\ 
+ ageMature & $-$2.620$^{***}$ & $-$1.400$^{***}$ & $-$0.539$^{***}$ & $-$0.822$^{***}$ \\ 
+  & (0.170) & (0.126) & (0.125) & (0.284) \\ 
+  & & & & \\ 
+ legal\_traditionCivil & $-$3.830$^{***}$ & $-$1.290$^{***}$ & 1.700$^{***}$ & $-$5.380$^{***}$ \\ 
+  & (0.264) & (0.140) & (0.163) & (1.110) \\ 
+  & & & & \\ 
+ legal\_traditionOther & $-$0.359$^{*}$ & 0.720$^{***}$ & 2.390$^{***}$ & $-$11.000$^{***}$ \\ 
+  & (0.195) & (0.146) & (0.175) & (0.0004) \\ 
+  & & & & \\ 
+ assets & 0.787$^{***}$ & 0.373$^{***}$ & $-$0.006 & 0.346$^{***}$ \\ 
+  & (0.036) & (0.025) & (0.023) & (0.061) \\ 
+  & & & & \\ 
+ kkm & 0.471$^{***}$ & 0.260$^{***}$ & $-$0.044$^{*}$ & $-$1.420$^{***}$ \\ 
+  & (0.033) & (0.024) & (0.025) & (0.138) \\ 
+  & & & & \\ 
+ pcrdbgdp & 0.156 & 0.081 & 0.001 & $-$2.300$^{***}$ \\ 
+  & (0.102) & (0.080) & (0.082) & (0.371) \\ 
+  & & & & \\ 
+ stmktcap & $-$0.269$^{***}$ & $-$0.248$^{***}$ & $-$0.431$^{***}$ & $-$1.110$^{***}$ \\ 
+  & (0.060) & (0.044) & (0.047) & (0.239) \\ 
+  & & & & \\ 
+ gdp\_growth\_annual & 0.057$^{***}$ & 0.061$^{***}$ & $-$0.0003 & $-$0.027 \\ 
+  & (0.016) & (0.013) & (0.012) & (0.039) \\ 
+  & & & & \\ 
+ Constant & $-$10.700$^{***}$ & $-$4.540$^{***}$ & $-$0.470 & $-$0.495 \\ 
+  & (0.558) & (0.371) & (0.349) & (1.010) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & Yes & No & No & No \\ 
+Data & No Coop & No Coop & No Coop & No Coop \\ 
+Akaike Inf. Crit. & 10,187.000 & 10,187.000 & 10,187.000 & 10,187.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{appendix-5-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives-and-year-effects}{%
+\subsection{Appendix 5: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives and Year Effects}\label{appendix-5-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives-and-year-effects}}
+
+\begin{table}[!htbp] \centering 
+  \caption{Regression Results - Multinomial Logit Model- Full Data Excluding Cooperatives and Year Effects} 
+  \label{} 
+\footnotesize 
+\begin{tabular}{@{\extracolsep{5pt}}lcccc} 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-5} 
+\\[-1.8ex] & Bank & NBFI & Coop & Rural Bank \\ 
+\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+\hline \\[-1.8ex] 
+ ageYoung & $-$1.740$^{***}$ & $-$0.619$^{***}$ & $-$0.543$^{***}$ & $-$1.120$^{***}$ \\ 
+  & (0.181) & (0.132) & (0.136) & (0.359) \\ 
+  & & & & \\ 
+ ageMature & $-$2.620$^{***}$ & $-$1.400$^{***}$ & $-$0.539$^{***}$ & $-$0.822$^{***}$ \\ 
+  & (0.170) & (0.126) & (0.125) & (0.284) \\ 
+  & & & & \\ 
+ legal\_traditionCivil & $-$3.830$^{***}$ & $-$1.290$^{***}$ & 1.700$^{***}$ & $-$5.380$^{***}$ \\ 
+  & (0.264) & (0.140) & (0.163) & (1.110) \\ 
+  & & & & \\ 
+ legal\_traditionOther & $-$0.359$^{*}$ & 0.720$^{***}$ & 2.390$^{***}$ & $-$11.000$^{***}$ \\ 
+  & (0.195) & (0.146) & (0.175) & (0.0004) \\ 
+  & & & & \\ 
+ assets & 0.787$^{***}$ & 0.373$^{***}$ & $-$0.006 & 0.346$^{***}$ \\ 
+  & (0.036) & (0.025) & (0.023) & (0.061) \\ 
+  & & & & \\ 
+ kkm & 0.471$^{***}$ & 0.260$^{***}$ & $-$0.044$^{*}$ & $-$1.420$^{***}$ \\ 
+  & (0.033) & (0.024) & (0.025) & (0.138) \\ 
+  & & & & \\ 
+ pcrdbgdp & 0.156 & 0.081 & 0.001 & $-$2.300$^{***}$ \\ 
+  & (0.102) & (0.080) & (0.082) & (0.371) \\ 
+  & & & & \\ 
+ stmktcap & $-$0.269$^{***}$ & $-$0.248$^{***}$ & $-$0.431$^{***}$ & $-$1.110$^{***}$ \\ 
+  & (0.060) & (0.044) & (0.047) & (0.239) \\ 
+  & & & & \\ 
+ gdp\_growth\_annual & 0.057$^{***}$ & 0.061$^{***}$ & $-$0.0003 & $-$0.027 \\ 
+  & (0.016) & (0.013) & (0.012) & (0.039) \\ 
+  & & & & \\ 
+ Constant & $-$10.700$^{***}$ & $-$4.540$^{***}$ & $-$0.470 & $-$0.495 \\ 
+  & (0.558) & (0.371) & (0.349) & (1.010) \\ 
+  & & & & \\ 
+\hline \\[-1.8ex] 
+Year Effects & No & No & No & No \\ 
+Data & Full & Full & Full & Full \\ 
+Akaike Inf. Crit. & 10,187.000 & 10,187.000 & 10,187.000 & 10,187.000 \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+
+\newpage
+
+\hypertarget{appendix-6-legal-traditions-in-africa}{%
+\subsection{Appendix 6: Legal Traditions in Africa}\label{appendix-6-legal-traditions-in-africa}}
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-57}Legal Traditions in Africa}
+\centering
+\fontsize{7}{9}\selectfont
+\begin{tabular}[t]{ll}
+\toprule
+Country & Legal\_Tradition\\
+\midrule
+Algeria & Civil\\
+Benin & Civil\\
+Burkina Faso & Civil\\
+Cameroon & Civil\\
+Central African Republic & Civil\\
+\addlinespace
+Chad & Civil\\
+Comoros & Civil\\
+Congo, Rep. & Civil\\
+Cote d'Ivoire & Civil\\
+Gabon & Civil\\
+\addlinespace
+Guinea & Civil\\
+Madagascar & Civil\\
+Mali & Civil\\
+Mauritania & Civil\\
+Morocco & Civil\\
+\addlinespace
+Niger & Civil\\
+Senegal & Civil\\
+Togo & Civil\\
+Tunisia & Civil\\
+Botswana & Common\\
+\addlinespace
+Eswatini & Common\\
+Gambia, The & Common\\
+Ghana & Common\\
+Kenya & Common\\
+Lesotho & Common\\
+\addlinespace
+Liberia & Common\\
+Malawi & Common\\
+Namibia & Common\\
+Nigeria & Common\\
+Sierra Leone & Common\\
+\addlinespace
+South Africa & Common\\
+South Sudan & Common\\
+Sudan & Common\\
+Tanzania & Common\\
+Uganda & Common\\
+\addlinespace
+Zambia & Common\\
+Zimbabwe & Common\\
+Angola & Others\\
+Burundi & Others\\
+Cape Verde & Others\\
+\addlinespace
+Congo, Dem. Rep. & Others\\
+Egypt, Arab Republic of & Others\\
+Equatorial Guinea & Others\\
+Eritrea & Others\\
+Ethiopia & Others\\
+\addlinespace
+Guinea-Bissau & Others\\
+Mozambique & Others\\
+Rwanda & Others\\
+\bottomrule
+\multicolumn{2}{l}{\rule{0pt}{1em}\textit{Source: }}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}Oto-Peralías and Romero-Ávila (2014)}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}\textit{Note: }}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}\textsuperscript{1} Other legal traditions include Spanish, Portuguese, Belgian, and Italian}\\
+\multicolumn{2}{l}{\rule{0pt}{1em}\textsuperscript{2} Ethiopia is a peculiar case of a country in Africa that was not colonised}\\
+\end{tabular}
+\end{table}
 
 \hypertarget{troubleshooting}{%
 \chapter{Troubleshooting}\label{troubleshooting}}
@@ -2079,8 +2653,8 @@ what is necessary is only to try to think them again.
 
 
 
-\hypertarget{conclusion}{%
-\chapter*{Conclusion}\label{conclusion}}
+\hypertarget{conclusion-1}{%
+\chapter*{Conclusion}\label{conclusion-1}}
 \addcontentsline{toc}{chapter}{Conclusion}
 
 If we don't want Conclusion to have a chapter number next to it, we can add the \texttt{\{-\}} attribute.

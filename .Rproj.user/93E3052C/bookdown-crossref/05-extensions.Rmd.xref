@@ -1,29 +1,40 @@
-h1:customisations-and-extensions Customisations and extensions
-h2:front-matter Front matter
-h3:shorten-captions-shown-in-the-list-of-figures-pdf Shorten captions shown in the list of figures (PDF)
-h3:shorten-captions-shown-in-the-list-of-tables-pdf Shorten captions shown in the list of tables (PDF)
-h2:shorten-running-header-pdf Shorten running header (PDF)
-h2:unnumbered-chapters Unnumbered chapters
-h2:beginning-chapters-with-quotes-pdf Beginning chapters with quotes (PDF)
-h2:highlighting-corrections-html-pdf Highlighting corrections (HTML & PDF)
-h3:short-inline-corrections Short, inline corrections
-h3:blocks-of-added-or-changed-material Blocks of added or changed material
-h3:stopping-corrections-from-being-highlighted Stopping corrections from being highlighted
-h2:apply-custom-font-color-and-highlighting-to-text-html-pdf Apply custom font color and highlighting to text (HTML & PDF)
-h2:embed-pdf Including another paper in your thesis - embed a PDF document
-h2:embed-rmd Including another paper in your thesis - R Markdown child document
-h3:an-example-paper-in-another-folder An example paper in another folder
-h3:step-1-include-paper-as-a-child-document Step 1: Include paper as a child document
-h3:step-2-make-file-paths-compatible Step 2: Make file paths compatible
-h4:note-on-html-output Note on HTML output
-h3:step-3-make-sure-header-levels-are-correct Step 3: Make sure header levels are correct
-h3:step-4.-make-sure-figure-widths-are-correct Step 4. Make sure figure widths are correct
-h2:customizing-referencing Customizing referencing
-h3:using-a-.csl-file-with-pandoc-instead-of-biblatex Using a .csl file with pandoc instead of biblatex
-h3:biblatex-custom Customizing biblatex and adding chapter bibliographies
-h2:customizing-the-page-headers-and-footers-pdf Customizing the page headers and footers (PDF)
-h2:diving-in-to-the-oxthesis-latex-template-pdf Diving in to the OxThesis LaTeX template (PDF)
-h2:customising-to-a-different-university Customising to a different university
-h3:the-minimal-route The minimal route
-h3:replacing-the-entire-title-page-with-your-required-content Replacing the entire title page with your required content
+h1:transformation-of-microfinance-institutions-in-africa Transformation of Microfinance Institutions in Africa
+h2:background 
+h2:related-literature Related Literature
+h2:summary-of-results Summary of Results
+h2:method Method
+h3:the-model-variables-description-and-data-sources The Model, Variables Description and Data Sources
+tab:echo Description of variables
+h2:results Results
+h3:exploratory-data-analysis Exploratory Data Analysis
+h4:data-visualisation Data visualisation
+h44:section 
+h4:summary-statistics Summary Statistics
+h3:results-of-the-regression-model Results of the Regression Model
+h4:age Age
+h4:legal-tradition Legal Tradition
+h4:size-log-of-total-assets Size (Log of Total Assets)
+h4:country-level-governance-institutional-quality-kkm Country Level Governance/ Institutional Quality (KKM)
+h4:private-credit-to-gdp Private Credit to GDP
+h4:stock-market-capitalisation-to-gdp Stock market capitalisation to GDP
+h4:gdp-annual-growth-rate GDP Annual Growth Rate
+h4:regional-divide Regional Divide
+h4:time-effects Time Effects
+h3:multinomial-logit-model Multinomial Logit Model
+h3:overall-model-fit Overall Model Fit
+h4:logit-model Logit Model
+h4:multinomial-logit-model-1 Multinomial Logit Model
+h3:regression-diagnostics Regression Diagnostics
+h4:extreme-values Extreme values
+h4:multicollinearity Multicollinearity
+h4:linearity-assumptions Linearity assumptions
+h3:other-robustness-checks Other Robustness Checks
+h2:conclusion Conclusion
+h2:appendices Appendices
+h3:appendix-1-logit-and-probit-models-excluding-cooperatives Appendix 1: Logit and Probit Models Excluding Cooperatives
+h3:appendix-2-multinomial-logit-model-with-full-dataset Appendix 2: Multinomial Logit Model With Full Dataset
+h3:appendix-3-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives Appendix 3: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives
+h3:appendix-4-multinomial-logit-model-with-full-dataset-but-no-year-effects Appendix 4: Multinomial Logit Model With Full Dataset But No Year Effects
+h3:appendix-5-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives-and-year-effects Appendix 5: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives and Year Effects
+h3:appendix-6-legal-traditions-in-africa Appendix 6: Legal Traditions in Africa
 
