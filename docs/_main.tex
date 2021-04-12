@@ -1590,10 +1590,11 @@ If \(K>2\), then we have a multinomial logit with \(K-1\) set of equations. Wher
 
 One of the significant drawbacks of the multinomial logit is the violation of the assumption of the independence of irrelevant alternatives (IIA). \textcite{cheng2007testing} ) illustrate this assumption using the blue bus- red bus example. If the choice between car transport and a red bus, and given that the probability of choosing a bus is \(0.8\), and \(0.2\) for a car, then the bus's odds over car transport is 4. Suppose we introduce a third alternative, the blue bus. If the probabilities of choosing a red bus, blue bus, and car transport are \(0.6\), \(0.25\), \(0.15\), respectively, the assumption holds since the odds of selecting a red bus over a car are still \(4\). If the odds are different from \(4\), then the model violates the IIA, and the multinomial model is not fit for the data. In our case, we plausibly see the assumption holding because the legal status of an individual MFI is independent of the legal status of other MFIs. Table 1 (next page) describes the variables in detail.
 
-\begin{table}
+\begin{landscape}\begin{table}
 
 \caption{\label{tab:unnamed-chunk-24}Description of Variables}
 \centering
+\fontsize{9}{11}\selectfont
 \begin{tabu} to \linewidth {>{\raggedright}X}
 \toprule
 Variable\_Description\\
@@ -1629,6 +1630,7 @@ Variable\_Description\\
 \multicolumn{1}{l}{\rule{0pt}{1em}\textsuperscript{4} GFDD on https://www.worldbank.org/en/publication/gfdr/data/global-financial-development-database}\\
 \end{tabu}
 \end{table}
+\end{landscape}
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
