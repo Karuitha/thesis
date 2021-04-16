@@ -10097,38 +10097,6 @@
         {
             "author": [
                 {
-                    "family": "Cervelló-Royo",
-                    "given": "Roberto"
-                },
-                {
-                    "family": "Guijarro",
-                    "given": "Francisco"
-                },
-                {
-                    "family": "Martinez-Gomez",
-                    "given": "Victor"
-                }
-            ],
-            "container-title": "Operational Research",
-            "id": "cervello2019social",
-            "issue": "3",
-            "issued": {
-                "date-parts": [
-                    [
-                        2019
-                    ]
-                ]
-            },
-            "page": "737-755",
-            "publisher": "Springer",
-            "title": "Social performance considered within the global performance of microfinance institutions: A new approach",
-            "title-short": "Social performance considered within the global performance of microfinance institutions",
-            "type": "article-journal",
-            "volume": "19"
-        },
-        {
-            "author": [
-                {
                     "family": "Salia",
                     "given": "Samuel"
                 },
@@ -10185,6 +10153,38 @@
             "title-short": "Educational impacts and cost-effectiveness of conditional cash transfer programs in developing countries",
             "type": "article-journal",
             "volume": "87"
+        },
+        {
+            "author": [
+                {
+                    "family": "Cervelló-Royo",
+                    "given": "Roberto"
+                },
+                {
+                    "family": "Guijarro",
+                    "given": "Francisco"
+                },
+                {
+                    "family": "Martinez-Gomez",
+                    "given": "Victor"
+                }
+            ],
+            "container-title": "Operational Research",
+            "id": "cervello2019social",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "737-755",
+            "publisher": "Springer",
+            "title": "Social performance considered within the global performance of microfinance institutions: A new approach",
+            "title-short": "Social performance considered within the global performance of microfinance institutions",
+            "type": "article-journal",
+            "volume": "19"
         },
         {
             "author": [
