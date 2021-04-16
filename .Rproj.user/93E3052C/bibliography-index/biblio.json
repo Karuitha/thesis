@@ -394,6 +394,25 @@
         {
             "author": [
                 {
+                    "literal": "Bank of Ghana"
+                }
+            ],
+            "id": "bankofghana2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Bank of Ghana",
+            "publisher-place": "Accra",
+            "title": "Annual Report 2016",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
                     "family": "Beck",
                     "given": "Erin"
                 },
@@ -1298,6 +1317,31 @@
             "title-short": "Financial development and openness",
             "type": "article-journal",
             "volume": "89"
+        },
+        {
+            "author": [
+                {
+                    "family": "Bandyopadhyay",
+                    "given": "S."
+                },
+                {
+                    "family": "Rodriguez",
+                    "given": "Juan Gabriel"
+                }
+            ],
+            "id": "poverty2017here",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "publisher": "Routledge",
+            "publisher-place": "London",
+            "title": "Research on economic inequality: Poverty, inequality and welfare",
+            "title-short": "Research on economic inequality",
+            "type": "book"
         },
         {
             "author": [
@@ -2493,6 +2537,79 @@
         {
             "author": [
                 {
+                    "family": "Chu",
+                    "given": "Yongqiang"
+                }
+            ],
+            "container-title": "Journal of Corporate Finance",
+            "id": "chu2017shareholder",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "318-332",
+            "publisher": "Elsevier",
+            "title": "Shareholder litigation, shareholder–creditor conflict, and the cost of bank loans",
+            "type": "article-journal",
+            "volume": "45"
+        },
+        {
+            "author": [
+                {
+                    "family": "Modigliani",
+                    "given": "Franco"
+                },
+                {
+                    "family": "Miller",
+                    "given": "Merton H"
+                }
+            ],
+            "container-title": "The American economic review",
+            "id": "modigliani1958cost",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1958
+                    ]
+                ]
+            },
+            "page": "261-297",
+            "publisher": "JSTOR",
+            "title": "The cost of capital, corporation finance and the theory of investment",
+            "type": "article-journal",
+            "volume": "48"
+        },
+        {
+            "author": [
+                {
+                    "family": "Allen",
+                    "given": "David E"
+                }
+            ],
+            "container-title": "Applied Financial Economics",
+            "id": "allen1993pecking",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1993
+                    ]
+                ]
+            },
+            "page": "101-112",
+            "publisher": "Taylor & Francis",
+            "title": "The pecking order hypothesis: Australian evidence",
+            "title-short": "The pecking order hypothesis",
+            "type": "article-journal",
+            "volume": "3"
+        },
+        {
+            "author": [
+                {
                     "family": "Cavalin",
                     "given": "Paulo"
                 },
@@ -2514,6 +2631,19 @@
             "publisher": "Springer",
             "title": "Confusion matrix-based building of hierarchical classification",
             "type": "paper-conference"
+        },
+        {
+            "URL": "https://www.cgap.org/topics/donors-investors",
+            "author": [
+                {
+                    "family": "CGAP"
+                }
+            ],
+            "container-title": "CGAP",
+            "id": "cgap2017",
+            "publisher": "Consultative Group to Assist the Poor (CGAP)",
+            "title": "Donors and investors",
+            "type": ""
         },
         {
             "author": [
@@ -3978,6 +4108,16 @@
                     "given": "Paul J"
                 }
             ],
+            "editor": [
+                {
+                    "family": "Powell",
+                    "given": "Walter W"
+                },
+                {
+                    "family": "DiMaggio",
+                    "given": "Paul J"
+                }
+            ],
             "id": "powell2012new",
             "issued": {
                 "date-parts": [
@@ -3987,7 +4127,7 @@
                 ]
             },
             "publisher": "University of Chicago press",
-            "title": "The new institutionalism in organizational analysis",
+            "title": "Introduction",
             "type": "book"
         },
         {
@@ -4496,6 +4636,33 @@
                     "given": "Eugene F"
                 },
                 {
+                    "family": "Jensen",
+                    "given": "Michael C"
+                }
+            ],
+            "container-title": "The journal of law and Economics",
+            "id": "fama1983agency",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1983
+                    ]
+                ]
+            },
+            "page": "327-349",
+            "publisher": "The University of Chicago Press",
+            "title": "Agency problems and residual claims",
+            "type": "article-journal",
+            "volume": "26"
+        },
+        {
+            "author": [
+                {
+                    "family": "Fama",
+                    "given": "Eugene F"
+                },
+                {
                     "family": "French",
                     "given": "Kenneth R"
                 }
@@ -4761,25 +4928,6 @@
         {
             "author": [
                 {
-                    "family": "Board",
-                    "given": "Financial Stability"
-                }
-            ],
-            "container-title": "July, Basel",
-            "id": "board2017assessment",
-            "issued": {
-                "date-parts": [
-                    [
-                        2017
-                    ]
-                ]
-            },
-            "title": "Assessment of shadow banking activities, risks and the adequacy of post-crisis policy tools to address financial stability concerns",
-            "type": "article-journal"
-        },
-        {
-            "author": [
-                {
                     "family": "Forkusam",
                     "given": "Akem Noela"
                 }
@@ -4903,6 +5051,25 @@
             "title": "CEO compensation",
             "type": "article-journal",
             "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Board",
+                    "given": "Financial Stability"
+                }
+            ],
+            "container-title": "July, Basel",
+            "id": "board2017assessment",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "Assessment of shadow banking activities, risks and the adequacy of post-crisis policy tools to address financial stability concerns",
+            "type": "article-journal"
         },
         {
             "author": [
@@ -6261,6 +6428,30 @@
         {
             "author": [
                 {
+                    "family": "Gobat",
+                    "given": "J."
+                }
+            ],
+            "container-title": "Finance and Development",
+            "id": "gobat2017banksmatter",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2007
+                    ]
+                ]
+            },
+            "page": "56-57",
+            "publisher": "IMF & INT BANK OF RECONSTRUCTION AND DEVELOPMENT",
+            "title": "Banks: At the heart of the matter",
+            "title-short": "Banks",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
                     "family": "Griffoli",
                     "given": "T. M."
                 }
@@ -6505,6 +6696,29 @@
             "title-short": "Objectivism versus constructivism",
             "type": "article-journal",
             "volume": "39"
+        },
+        {
+            "author": [
+                {
+                    "family": "Genoe McLaren",
+                    "given": "Patricia"
+                }
+            ],
+            "container-title": "Management & Organizational History",
+            "id": "genoe2011james",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2011
+                    ]
+                ]
+            },
+            "page": "411-423",
+            "publisher": "SAGE Publications Sage UK: London, England",
+            "title": "James burnham, the managerial revolution, and the development of management theory in post-war america",
+            "type": "article-journal",
+            "volume": "6"
         },
         {
             "author": [
@@ -6961,6 +7175,30 @@
             "title-short": "Capital structure, profitability and firm value",
             "type": "article-journal",
             "volume": "17"
+        },
+        {
+            "author": [
+                {
+                    "family": "Kodres",
+                    "given": "L."
+                }
+            ],
+            "container-title": "Finance and Development",
+            "id": "kodres2017shadowbanking",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "52-53",
+            "publisher": "IMF & INT BANK OF RECONSTRUCTION AND DEVELOPMENT",
+            "title": "Shadow banking: Out of the eyes of regulators",
+            "title-short": "Shadow banking",
+            "type": "article-journal",
+            "volume": "44"
         },
         {
             "author": [
@@ -8845,6 +9083,37 @@
         {
             "author": [
                 {
+                    "family": "Ndung’u",
+                    "given": "N."
+                },
+                {
+                    "family": "Morales",
+                    "given": "A."
+                },
+                {
+                    "family": "Ndirangu",
+                    "given": "L."
+                }
+            ],
+            "container-title": "Finance and Development",
+            "id": "ndungumorales2017",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "page": "14-17",
+            "publisher": "IMF & INT BANK OF RECONSTRUCTION AND DEVELOPMENT",
+            "title": "Cashing in on the digital economy",
+            "type": "article-journal",
+            "volume": "44"
+        },
+        {
+            "author": [
+                {
                     "family": "Newman",
                     "given": "Alexander"
                 },
@@ -9828,6 +10097,38 @@
         {
             "author": [
                 {
+                    "family": "Cervelló-Royo",
+                    "given": "Roberto"
+                },
+                {
+                    "family": "Guijarro",
+                    "given": "Francisco"
+                },
+                {
+                    "family": "Martinez-Gomez",
+                    "given": "Victor"
+                }
+            ],
+            "container-title": "Operational Research",
+            "id": "cervello2019social",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "737-755",
+            "publisher": "Springer",
+            "title": "Social performance considered within the global performance of microfinance institutions: A new approach",
+            "title-short": "Social performance considered within the global performance of microfinance institutions",
+            "type": "article-journal",
+            "volume": "19"
+        },
+        {
+            "author": [
+                {
                     "family": "Salia",
                     "given": "Samuel"
                 },
@@ -10601,6 +10902,25 @@
         {
             "author": [
                 {
+                    "family": "Tirole",
+                    "given": "Jean"
+                }
+            ],
+            "id": "tirole2010theory",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "publisher": "Princeton University Press",
+            "title": "The theory of corporate finance",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
                     "family": "Toindepi",
                     "given": "Joseph"
                 }
@@ -10760,6 +11080,38 @@
             "title": "Financial development and economic growth",
             "type": "article-journal",
             "volume": "23"
+        },
+        {
+            "author": [
+                {
+                    "family": "Valickova",
+                    "given": "Petra"
+                },
+                {
+                    "family": "Havranek",
+                    "given": "Tomas"
+                },
+                {
+                    "family": "Horvath",
+                    "given": "Roman"
+                }
+            ],
+            "container-title": "Journal of Economic Surveys",
+            "id": "valickova2015financial",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "506-526",
+            "publisher": "Wiley Online Library",
+            "title": "Financial development and economic growth: A meta-analysis",
+            "title-short": "Financial development and economic growth",
+            "type": "article-journal",
+            "volume": "29"
         },
         {
             "author": [
