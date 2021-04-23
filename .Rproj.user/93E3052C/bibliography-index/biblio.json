@@ -11551,6 +11551,30 @@
         {
             "author": [
                 {
+                    "family": "Zaby",
+                    "given": "Simon"
+                }
+            ],
+            "container-title": "Sustainability",
+            "id": "zaby2019science",
+            "issue": "14",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "3883",
+            "publisher": "Multidisciplinary Digital Publishing Institute",
+            "title": "Science mapping of the global knowledge base on microfinance: Influential authors and documents, 1989–2019",
+            "title-short": "Science mapping of the global knowledge base on microfinance",
+            "type": "article-journal",
+            "volume": "11"
+        },
+        {
+            "author": [
+                {
                     "family": "Zeitun",
                     "given": "Rami"
                 },
@@ -11730,6 +11754,199 @@
             "title": "From kashf foundation to kashf microfinance bank—changing organizational identities",
             "type": "article-journal",
             "volume": "14"
+        },
+        {
+            "author": [
+                {
+                    "family": "Silva",
+                    "given": "Patricio"
+                }
+            ],
+            "container-title": "The Changing Role of the State in Latin America",
+            "id": "silva1998neoliberalism",
+            "issued": {
+                "date-parts": [
+                    [
+                        1998
+                    ]
+                ]
+            },
+            "page": "75-92",
+            "publisher": "Westview Press Boulder",
+            "title": "Neoliberalism, democratization, and the rise of technocrats",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rajan",
+                    "given": "Raghuram"
+                },
+                {
+                    "family": "Zingales",
+                    "given": "Luigi"
+                }
+            ],
+            "container-title": "American Economic Review",
+            "id": "rajan1998financial",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        1998
+                    ]
+                ]
+            },
+            "page": "559-586",
+            "title": "Financial development and growth",
+            "type": "article-journal",
+            "volume": "88"
+        },
+        {
+            "author": [
+                {
+                    "family": "Petrucci",
+                    "given": "Carrie J"
+                }
+            ],
+            "container-title": "Journal of social service research",
+            "id": "petrucci2009primer",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2009
+                    ]
+                ]
+            },
+            "page": "193-205",
+            "publisher": "Taylor & Francis",
+            "title": "A primer for social worker researchers on how to conduct a multinomial logistic regression",
+            "type": "article-journal",
+            "volume": "35"
+        },
+        {
+            "author": [
+                {
+                    "family": "Yartey",
+                    "given": "Charles Amo"
+                }
+            ],
+            "collection-number": "32",
+            "id": "yartey2008determinants",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "publisher": "International Monetary Fund",
+            "title": "The determinants of stock market development in emerging economies",
+            "type": "book",
+            "volume": "2008"
+        },
+        {
+            "author": [
+                {
+                    "family": "Porter",
+                    "given": "Philip K"
+                },
+                {
+                    "family": "Scully",
+                    "given": "Gerald W"
+                }
+            ],
+            "container-title": "The Journal of law and economics",
+            "id": "porter1987economic",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        1987
+                    ]
+                ]
+            },
+            "page": "489-512",
+            "publisher": "The University of Chicago Press",
+            "title": "Economic efficiency in cooperatives",
+            "type": "article-journal",
+            "volume": "30"
+        },
+        {
+            "author": [
+                {
+                    "family": "Oto-Peralias",
+                    "given": "Daniel"
+                },
+                {
+                    "family": "Romero-Avila",
+                    "given": "Diego"
+                }
+            ],
+            "container-title": "The Journal of Law and Economics",
+            "id": "oto2014distribution",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "page": "561-628",
+            "publisher": "University of Chicago Press Chicago, IL",
+            "title": "The distribution of legal traditions around the world: A contribution to the legal-origins theory",
+            "title-short": "The distribution of legal traditions around the world",
+            "type": "article-journal",
+            "volume": "57"
+        },
+        {
+            "author": [
+                {
+                    "family": "Sobel",
+                    "given": "Russell S"
+                }
+            ],
+            "container-title": "Journal of Business Venturing",
+            "id": "sobel2008testing",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "page": "641-655",
+            "publisher": "Elsevier",
+            "title": "Testing baumol: Institutional quality and the productivity of entrepreneurship",
+            "title-short": "Testing baumol",
+            "type": "article-journal",
+            "volume": "23"
+        },
+        {
+            "author": [
+                {
+                    "family": "Zeng",
+                    "given": "Guoping"
+                }
+            ],
+            "container-title": "Communications in Statistics-Theory and Methods",
+            "id": "zeng2020confusion",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "2080-2093",
+            "publisher": "Taylor & Francis",
+            "title": "On the confusion matrix in credit scoring and its analytical properties",
+            "type": "article-journal",
+            "volume": "49"
         }
     ],
     "project_biblios": [
