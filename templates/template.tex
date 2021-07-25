@@ -27,7 +27,7 @@
 % This one will format for PDF output (ie equal margins, no extra blank pages):
 %\documentclass[a4paper,nobind]{templates/ociamthesis}
 %UL 2 Dec 2018: pass this in from YAML
-\documentclass[a4paper, $if(page-layout)$$page-layout$$endif$]{templates/ociamthesis}
+\documentclass[a4paper,$if(page-layout)$$page-layout$$endif$]{templates/ociamthesis}
 
 % UL 5 January 2021 - add packages used by kableExtra
 \usepackage{booktabs}
@@ -370,5 +370,6 @@ $endif$
 $if(use-natbib)$
 \bibliography{$bibliography$}
 $endif$
+
 
 \end{document}

@@ -1321,6 +1321,32 @@
         {
             "author": [
                 {
+                    "family": "Croissant",
+                    "given": "Yves"
+                },
+                {
+                    "family": "Millo",
+                    "given": "Giovanni"
+                }
+            ],
+            "container-title": "Journal of statistical software",
+            "id": "croissant2008panel",
+            "issue": "2",
+            "issued": {
+                "date-parts": [
+                    [
+                        2008
+                    ]
+                ]
+            },
+            "title": "Panel data econometrics in r: The plm package",
+            "title-short": "Panel data econometrics in r",
+            "type": "article-journal",
+            "volume": "27"
+        },
+        {
+            "author": [
+                {
                     "family": "Bandyopadhyay",
                     "given": "S."
                 },
@@ -1477,6 +1503,60 @@
             "title": "On the debt capacity of growth options",
             "type": "article-journal",
             "volume": "79"
+        },
+        {
+            "author": [
+                {
+                    "family": "Gale",
+                    "given": "Douglas"
+                },
+                {
+                    "family": "Yorulmazer",
+                    "given": "Tanju"
+                }
+            ],
+            "container-title": "Economic Theory",
+            "id": "gale2020bank",
+            "issue": "4",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "919-963",
+            "publisher": "Springer",
+            "title": "Bank capital, fire sales, and the social value of deposits",
+            "type": "article-journal",
+            "volume": "69"
+        },
+        {
+            "author": [
+                {
+                    "dropping-particle": "di",
+                    "family": "Prisco",
+                    "given": "Domenico"
+                },
+                {
+                    "family": "Strangio",
+                    "given": "Donatella"
+                }
+            ],
+            "container-title": "Technology Analysis & Strategic Management",
+            "id": "di2021technology",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "page": "1-14",
+            "publisher": "Taylor & Francis",
+            "title": "Technology and financial inclusion: A case study to evaluate potential and limitations of blockchain in emerging countries",
+            "title-short": "Technology and financial inclusion",
+            "type": "article-journal"
         },
         {
             "author": [
@@ -4234,6 +4314,30 @@
             "title-short": "The access of microfinance institutions to debt capital",
             "type": "article-journal",
             "volume": "65"
+        },
+        {
+            "author": [
+                {
+                    "family": "Marron",
+                    "given": "Donncha"
+                }
+            ],
+            "container-title": "New Political Economy",
+            "id": "marron2013governing",
+            "issue": "6",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "785-810",
+            "publisher": "Taylor & Francis",
+            "title": "Governing poverty in a neoliberal age: New labour and the case of financial exclusion",
+            "title-short": "Governing poverty in a neoliberal age",
+            "type": "article-journal",
+            "volume": "18"
         },
         {
             "author": [
@@ -7573,6 +7677,42 @@
         {
             "author": [
                 {
+                    "family": "Abbas",
+                    "given": "Faisal"
+                },
+                {
+                    "family": "Ali",
+                    "given": "Shoaib"
+                },
+                {
+                    "family": "Yousaf",
+                    "given": "Imran"
+                },
+                {
+                    "family": "Rizwan",
+                    "given": "Sohail"
+                }
+            ],
+            "container-title": "Cogent Business & Management",
+            "id": "abbas2020commercial",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "page": "1859848",
+            "publisher": "Taylor & Francis",
+            "title": "How commercial banks adjust capital ratios: Empirical evidence from the USA?‎",
+            "title-short": "How commercial banks adjust capital ratios",
+            "type": "article-journal",
+            "volume": "7"
+        },
+        {
+            "author": [
+                {
                     "family": "Le",
                     "given": "Thi Phuong Vy"
                 },
@@ -9260,6 +9400,36 @@
         {
             "author": [
                 {
+                    "family": "Asadullah",
+                    "given": "M Niaz"
+                },
+                {
+                    "family": "Shreya",
+                    "given": "Nudrat Faria"
+                },
+                {
+                    "family": "Wahhaj",
+                    "given": "Zaki"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "id": "asadullah2021access",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "World Institute for Development Economic Research (UNU-WIDER)",
+            "title": "Access to microfinance and female labour force participation",
+            "type": "report"
+        },
+        {
+            "author": [
+                {
                     "family": "Onyuma",
                     "given": "Samuel O"
                 },
@@ -10703,6 +10873,29 @@
         {
             "author": [
                 {
+                    "family": "Tchuigoua",
+                    "given": "Hubert Tchakoute"
+                }
+            ],
+            "container-title": "Journal of Financial Services Research",
+            "id": "tchuigoua2015capital",
+            "issue": "3",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "page": "313-340",
+            "publisher": "Springer",
+            "title": "Capital structure of microfinance institutions",
+            "type": "article-journal",
+            "volume": "47"
+        },
+        {
+            "author": [
+                {
                     "family": "Hasani",
                     "given": "Enver"
                 },
@@ -11027,6 +11220,31 @@
             "title-short": "Financial development and poverty reduction nexus",
             "type": "article-journal",
             "volume": "36"
+        },
+        {
+            "author": [
+                {
+                    "family": "Henningsen",
+                    "given": "Arne"
+                },
+                {
+                    "family": "Henningsen",
+                    "given": "Géraldine"
+                }
+            ],
+            "container-title": "Panel data econometrics",
+            "id": "henningsen2019analysis",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "page": "345-396",
+            "publisher": "Elsevier",
+            "title": "Analysis of panel data using r",
+            "type": "chapter"
         },
         {
             "author": [
@@ -11947,6 +12165,128 @@
             "title": "On the confusion matrix in credit scoring and its analytical properties",
             "type": "article-journal",
             "volume": "49"
+        },
+        {
+            "author": [
+                {
+                    "family": "Ito",
+                    "given": "Hiro"
+                },
+                {
+                    "family": "Kawai",
+                    "given": "Masahiro"
+                },
+                {
+                    "literal": "others"
+                }
+            ],
+            "id": "ito2018quantity",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "Quantity and quality measures of financial development: Implications for macroeconomic performance",
+            "title-short": "Quantity and quality measures of financial development",
+            "type": "report"
+        },
+        {
+            "author": [
+                {
+                    "family": "Mandrekar",
+                    "given": "Jayawant N"
+                }
+            ],
+            "container-title": "Journal of Thoracic Oncology",
+            "id": "mandrekar2010receiver",
+            "issue": "9",
+            "issued": {
+                "date-parts": [
+                    [
+                        2010
+                    ]
+                ]
+            },
+            "page": "1315-1316",
+            "publisher": "Elsevier",
+            "title": "Receiver operating characteristic curve in diagnostic test assessment",
+            "type": "article-journal",
+            "volume": "5"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pesaran",
+                    "given": "M Hashem"
+                }
+            ],
+            "container-title": "Empirical Economics",
+            "id": "pesaran2021general",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "page": "13-50",
+            "publisher": "Springer",
+            "title": "General diagnostic tests for cross-sectional dependence in panels",
+            "type": "article-journal",
+            "volume": "60"
+        },
+        {
+            "author": [
+                {
+                    "family": "Jarotschkin",
+                    "given": "Alexandra"
+                }
+            ],
+            "container-title": "Financial Sector Development in Africa: Opportunities and Challenges. International Bank for Reconstruction and Development/The World Bank, Washington DC",
+            "id": "jarotschkin2013microfinance",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "page": "8-40",
+            "title": "Microfinance in africa",
+            "type": "article-journal"
+        },
+        {
+            "author": [
+                {
+                    "family": "Boussofiane",
+                    "given": "Aziz"
+                },
+                {
+                    "family": "Dyson",
+                    "given": "Robert G"
+                },
+                {
+                    "family": "Thanassoulis",
+                    "given": "Emmanuel"
+                }
+            ],
+            "container-title": "European journal of operational research",
+            "id": "boussofiane1991applied",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        1991
+                    ]
+                ]
+            },
+            "page": "1-15",
+            "publisher": "Elsevier",
+            "title": "Applied data envelopment analysis",
+            "type": "article-journal",
+            "volume": "52"
         }
     ],
     "project_biblios": [

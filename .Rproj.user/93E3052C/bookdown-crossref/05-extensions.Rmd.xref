@@ -1,40 +1,40 @@
 h1:transformation-of-microfinance-institutions-in-africa Transformation of Microfinance Institutions in Africa
-h2:background 
-h2:related-literature Related Literature
+h1:background 
+h1:related-literature Related Literature
 h2:summary-of-results Summary of Results
-h2:method Method
-h3:the-model-variables-description-and-data-sources The Model, Variables Description and Data Sources
-tab:echo Description of variables
-h2:results Results
-h3:exploratory-data-analysis Exploratory Data Analysis
-h4:data-visualisation Data visualisation
+h1:method Method
+h2:the-model-variables-description-and-data-sources The Model, Variables Description and Data Sources
+h1:data-analysis-and-results Data Analysis and Results
+h2:exploratory-data-analysis Exploratory Data Analysis
+h3:data-visualisation Data visualisation
 h44:section 
-h4:summary-statistics Summary Statistics
-h3:results-of-the-regression-model Results of the Regression Model
-h4:age Age
-h4:legal-tradition Legal Tradition
-h4:size-log-of-total-assets Size (Log of Total Assets)
-h4:country-level-governance-institutional-quality-kkm Country Level Governance/ Institutional Quality (KKM)
-h4:private-credit-to-gdp Private Credit to GDP
-h4:stock-market-capitalisation-to-gdp Stock market capitalisation to GDP
-h4:gdp-annual-growth-rate GDP Annual Growth Rate
-h4:regional-divide Regional Divide
-h4:time-effects Time Effects
-h3:multinomial-logit-model Multinomial Logit Model
-h3:overall-model-fit Overall Model Fit
-h4:logit-model Logit Model
-h4:multinomial-logit-model-1 Multinomial Logit Model
-h3:regression-diagnostics Regression Diagnostics
-h4:extreme-values Extreme values
-h4:multicollinearity Multicollinearity
-h4:linearity-assumptions Linearity assumptions
-h3:other-robustness-checks Other Robustness Checks
-h2:conclusion Conclusion
-h2:appendices Appendices
-h3:appendix-1-logit-and-probit-models-excluding-cooperatives Appendix 1: Logit and Probit Models Excluding Cooperatives
-h3:appendix-2-multinomial-logit-model-with-full-dataset Appendix 2: Multinomial Logit Model With Full Dataset
-h3:appendix-3-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives Appendix 3: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives
-h3:appendix-4-multinomial-logit-model-with-full-dataset-but-no-year-effects Appendix 4: Multinomial Logit Model With Full Dataset But No Year Effects
-h3:appendix-5-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives-and-year-effects Appendix 5: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives and Year Effects
-h3:appendix-6-legal-traditions-in-africa Appendix 6: Legal Traditions in Africa
+h3:summary-statistics Summary Statistics
+h2:results-of-the-regression-model Results of the Regression Model
+h3:age Age
+h3:legal-tradition Legal Tradition
+h3:size-log-of-total-assets Size (Log of Total Assets)
+h3:country-level-governance-institutional-quality-kkm Country Level Governance/ Institutional Quality (KKM)
+h3:private-credit-to-gdp Private Credit to GDP
+h3:stock-market-capitalisation-to-gdp Stock market capitalisation to GDP
+h3:gdp-annual-growth-rate GDP Annual Growth Rate
+h3:time-effects Time Effects
+h3:regional-divide Regional Divide
+h2:multinomial-logit-model Multinomial Logit Model
+h2:overall-model-fit Overall Model Fit
+h3:logit-model Logit Model
+h3:multinomial-logit-model-1 Multinomial Logit Model
+h2:regression-diagnostics Regression Diagnostics
+h3:extreme-values Extreme values
+h3:multicollinearity Multicollinearity
+h3:linearity-assumptions Linearity assumptions
+h2:other-robustness-checks Other Robustness Checks
+h1:conclusion Conclusion
+h1:references 
+h1:appendices Appendices
+h2:appendix-1-logit-and-probit-models-excluding-cooperatives Appendix 1: Logit and Probit Models Excluding Cooperatives
+h2:appendix-2-multinomial-logit-model-with-full-dataset Appendix 2: Multinomial Logit Model With Full Dataset
+h2:appendix-3-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives Appendix 3: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives
+h2:appendix-4-multinomial-logit-model-with-full-dataset-but-no-year-effects Appendix 4: Multinomial Logit Model With Full Dataset But No Year Effects
+h2:appendix-5-multinomial-logit-model--full-data-excluding-credit-unions-cooperatives-and-year-effects Appendix 5: Multinomial Logit Model- Full Data Excluding Credit Unions/ Cooperatives and Year Effects
+h2:appendix-6-legal-traditions-in-africa Appendix 6: Legal Traditions in Africa
 
